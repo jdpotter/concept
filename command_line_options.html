@@ -1,94 +1,55 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command-line options &mdash; CONCEPT Documentation</title>
-  
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://jmd-dk.github.io/concept/command_line_options.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-    <link rel="canonical" href="https://jmd-dk.github.io/concept/command_line_options.html"/>
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Parameters" href="parameters/parameters.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> CO<em>N</em>CEPT
           
-
-          
-            
-            <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
+          <a href="index.html" class="icon icon-home">
+            CO<em>N</em>CEPT
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
           </a>
-
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search documentation" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tutorial/tutorial.html">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/installation.html">1. Effortless installation</a></li>
@@ -100,9 +61,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/output_types.html">5. Other kinds of output</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#d-renders">5.1. 3D renders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#id1">5.2. 2D renders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#snapshots">5.3. Snapshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#bispectra">5.1. Bispectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#d-renders">5.2. 3D renders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#id1">5.3. 2D renders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial/output_types.html#snapshots">5.4. Snapshots</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/working_remotely.html">6. Working on remote clusters</a></li>
@@ -114,12 +76,8 @@
 <li class="toctree-l3"><a class="reference internal" href="tutorial/beyond_matter_only.html#non-linear-massive-neutrinos">7.5. Non-linear massive neutrinos</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial/utilities.html">8. Using utilities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/utilities.html#the-powerspec-and-render-utilities">8.1. The powerspec and render utilities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/utilities.html#the-class-utility">8.2. The CLASS utility</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial/utilities.html#the-update-utility">8.3. The update utility</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/bispectra.html">8. Bispectra and 2LPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/gadget.html">9. Comparison with GADGET-2</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
@@ -129,16 +87,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#cloning-with-git">Cloning with Git</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#the-installer-script-in-depth">The <code class="docutils literal notranslate"><span class="pre">installer</span></code> script in-depth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#the-install-script-in-depth">The <code class="docutils literal notranslate"><span class="pre">install</span></code> script in-depth</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="installation.html#programs-installed">Programs installed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="installation.html#command-line-options">Command-line options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="installation.html#influential-environment-variables">Influential environment variables</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#making-use-of-pre-installed-libraries">Making use of pre-installed libraries</a></li>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#specifying-dependency-versions">Specifying dependency versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#specifying-dependency-urls">Specifying dependency URLs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#choosing-compiler-precedence">Choosing compiler precedence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#installing-mpich-or-openmpi">Installing MPICH or OpenMPI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#parallel-builds">Parallel builds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation.html#using-the-installer-to-install-specific-libraries-but-not-concept-itself">Using the <code class="docutils literal notranslate"><span class="pre">installer</span></code> to install specific libraries but not CO<em>N</em>CEPT itself</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#using-the-install-script-to-install-specific-libraries-but-not-concept-itself">Using the <code class="docutils literal notranslate"><span class="pre">install</span></code> script to install specific libraries but not CO<em>N</em>CEPT itself</a></li>
 </ul>
 </li>
 </ul>
@@ -149,8 +108,8 @@
 <li class="toctree-l3"><a class="reference internal" href="installation.html#system-dependencies">System dependencies</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#the-paths-and-env-files">The <code class="docutils literal notranslate"><span class="pre">.paths</span></code> and <code class="docutils literal notranslate"><span class="pre">.env</span></code> files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="installation.html#the-paths-file">The <code class="docutils literal notranslate"><span class="pre">.paths</span></code> file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#the-path-and-env-files">The <code class="docutils literal notranslate"><span class="pre">.path</span></code> and <code class="docutils literal notranslate"><span class="pre">.env</span></code> files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#the-path-file">The <code class="docutils literal notranslate"><span class="pre">.path</span></code> file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="installation.html#the-env-file">The <code class="docutils literal notranslate"><span class="pre">.env</span></code> file</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#path-like-environment-variables"><code class="docutils literal notranslate"><span class="pre">PATH</span></code>-like environment variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="installation.html#eliminating-interference-from-foreign-python-installations">Eliminating interference from foreign Python installations</a></li>
@@ -165,37 +124,40 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line options</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basics">Basics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#help-h-help">Help: <code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#parameter-file-p-params">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--params</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-file-p-param">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--param</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#command-line-parameters-c-command-line-params">Command-line parameters: <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--command-line-params</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#number-of-processes-n-nprocs">Number of processes: <code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--nprocs</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#specifying-multiple-nodes">Specifying multiple nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#utility-u-utility">Utility: <code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--utility</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#version-v-version">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#remote-job-submission">Remote job submission</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#queue-q-queue">Queue: <code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--queue</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-time-w-wall-time">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--wall-time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wall-time-w-walltime">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--walltime</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#memory-memory">Memory: <code class="docutils literal notranslate"><span class="pre">--memory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#job-name-job-name">Job name: <code class="docutils literal notranslate"><span class="pre">--job-name</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#job-directive-j-job-directive">Job directive: <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--job-directive</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#no-watching-no-watching">No watching: <code class="docutils literal notranslate"><span class="pre">--no-watching</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#watch-watch">Watch: <code class="docutils literal notranslate"><span class="pre">--watch</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#other-modes-of-building-running">Other modes of building/running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-running">Building and running</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#local-local">Local: <code class="docutils literal notranslate"><span class="pre">--local</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pure-python-pure-python">Pure Python: <code class="docutils literal notranslate"><span class="pre">--pure-python</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#no-optimizations-no-optimizations">No optimizations: <code class="docutils literal notranslate"><span class="pre">--no-optimizations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-b-build">Build: <code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">--build</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rebuild-rebuild">Rebuild: <code class="docutils literal notranslate"><span class="pre">--rebuild</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optimizations-optimizations">Optimizations: <code class="docutils literal notranslate"><span class="pre">--optimizations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#link-time-optimizations-linktime-optimizations">Link time optimizations: <code class="docutils literal notranslate"><span class="pre">--linktime-optimizations</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#native-optimizations-native-optimizations">Native optimizations: <code class="docutils literal notranslate"><span class="pre">--native-optimizations</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#no-recompilation-no-recompilation">No recompilation: <code class="docutils literal notranslate"><span class="pre">--no-recompilation</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#unsafe-building-unsafe-building">Unsafe building: <code class="docutils literal notranslate"><span class="pre">--unsafe-building</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safe-build-safe-build">Safe build: <code class="docutils literal notranslate"><span class="pre">--safe-build</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#specials">Specials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#test-t-test">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--test</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-t-tests">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tests</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#main-entry-point-m-main">Main entry point: <code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--main</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#interactive-i-interactive">Interactive: <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">--interactive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-v-version">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -203,53 +165,130 @@
 <li class="toctree-l1"><a class="reference internal" href="parameters/parameters.html">Parameters</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="parameters/input_output.html">Input/output</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#initial-conditions"><code class="docutils literal notranslate"><span class="pre">initial_conditions</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#output-dirs"><code class="docutils literal notranslate"><span class="pre">output_dirs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#output-bases"><code class="docutils literal notranslate"><span class="pre">output_bases</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#output-times"><code class="docutils literal notranslate"><span class="pre">output_times</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#autosave-interval"><code class="docutils literal notranslate"><span class="pre">autosave_interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#snapshot-select"><code class="docutils literal notranslate"><span class="pre">snapshot_select</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#powerspec-select"><code class="docutils literal notranslate"><span class="pre">powerspec_select</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#bispec-select"><code class="docutils literal notranslate"><span class="pre">bispec_select</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#render2d-select"><code class="docutils literal notranslate"><span class="pre">render2D_select</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#render3d-select"><code class="docutils literal notranslate"><span class="pre">render3D_select</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#snapshot-type"><code class="docutils literal notranslate"><span class="pre">snapshot_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#gadget-snapshot-params"><code class="docutils literal notranslate"><span class="pre">gadget_snapshot_params</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#snapshot-wrap"><code class="docutils literal notranslate"><span class="pre">snapshot_wrap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#select-particle-id"><code class="docutils literal notranslate"><span class="pre">select_particle_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#class-plot-perturbations"><code class="docutils literal notranslate"><span class="pre">class_plot_perturbations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#class-extra-background"><code class="docutils literal notranslate"><span class="pre">class_extra_background</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/input_output.html#class-extra-perturbations"><code class="docutils literal notranslate"><span class="pre">class_extra_perturbations</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parameters/numerical_parameters.html">Numerical parameters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parameters/numerical_parameters.html#boxsize"><code class="docutils literal notranslate"><span class="pre">boxsize</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters/numerics.html">Numerics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#boxsize"><code class="docutils literal notranslate"><span class="pre">boxsize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#potential-options"><code class="docutils literal notranslate"><span class="pre">potential_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#shortrange-params"><code class="docutils literal notranslate"><span class="pre">shortrange_params</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#powerspec-options"><code class="docutils literal notranslate"><span class="pre">powerspec_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#bispec-options"><code class="docutils literal notranslate"><span class="pre">bispec_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#bispec-antialiasing"><code class="docutils literal notranslate"><span class="pre">bispec_antialiasing</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#class-dedicated-spectra"><code class="docutils literal notranslate"><span class="pre">class_dedicated_spectra</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/numerics.html#class-modes-per-decade"><code class="docutils literal notranslate"><span class="pre">class_modes_per_decade</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="parameters/cosmology.html">Cosmology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#h0"><code class="docutils literal notranslate"><span class="pre">H0</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#b"><code class="docutils literal notranslate"><span class="pre">Ωb</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#cdm"><code class="docutils literal notranslate"><span class="pre">Ωcdm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#a-begin"><code class="docutils literal notranslate"><span class="pre">a_begin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#t-begin"><code class="docutils literal notranslate"><span class="pre">t_begin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#primordial-spectrum"><code class="docutils literal notranslate"><span class="pre">primordial_spectrum</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="parameters/cosmology.html#class-params"><code class="docutils literal notranslate"><span class="pre">class_params</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="parameters/physics.html">Physics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#select-forces"><code class="docutils literal notranslate"><span class="pre">select_forces</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#select-species"><code class="docutils literal notranslate"><span class="pre">select_species</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#realization-options"><code class="docutils literal notranslate"><span class="pre">realization_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#select-lives"><code class="docutils literal notranslate"><span class="pre">select_lives</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#softening-kernel"><code class="docutils literal notranslate"><span class="pre">softening_kernel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/physics.html#select-softening-length"><code class="docutils literal notranslate"><span class="pre">select_softening_length</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parameters/simulation_options.html">Simulation options</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parameters/simulation_options.html#t-base-background-factor"><code class="docutils literal notranslate"><span class="pre">Δt_base_background_factor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters/simulation.html">Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#t-base-background-factor"><code class="docutils literal notranslate"><span class="pre">Δt_base_background_factor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#t-base-nonlinear-factor"><code class="docutils literal notranslate"><span class="pre">Δt_base_nonlinear_factor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#t-increase-max-factor"><code class="docutils literal notranslate"><span class="pre">Δt_increase_max_factor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#t-rung-factor"><code class="docutils literal notranslate"><span class="pre">Δt_rung_factor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#a-max-early"><code class="docutils literal notranslate"><span class="pre">Δa_max_early</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#a-max-late"><code class="docutils literal notranslate"><span class="pre">Δa_max_late</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#static-timestepping"><code class="docutils literal notranslate"><span class="pre">static_timestepping</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#n-rungs"><code class="docutils literal notranslate"><span class="pre">N_rungs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#fftw-wisdom-rigor"><code class="docutils literal notranslate"><span class="pre">fftw_wisdom_rigor</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#fftw-wisdom-reuse"><code class="docutils literal notranslate"><span class="pre">fftw_wisdom_reuse</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#fftw-wisdom-share"><code class="docutils literal notranslate"><span class="pre">fftw_wisdom_share</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#random-seeds"><code class="docutils literal notranslate"><span class="pre">random_seeds</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#primordial-amplitude-fixed"><code class="docutils literal notranslate"><span class="pre">primordial_amplitude_fixed</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#primordial-phase-shift"><code class="docutils literal notranslate"><span class="pre">primordial_phase_shift</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#cell-centered"><code class="docutils literal notranslate"><span class="pre">cell_centered</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#class-k-max"><code class="docutils literal notranslate"><span class="pre">class_k_max</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/simulation.html#class-reuse"><code class="docutils literal notranslate"><span class="pre">class_reuse</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="parameters/graphics.html">Graphics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parameters/graphics.html#terminal-width"><code class="docutils literal notranslate"><span class="pre">terminal_width</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/graphics.html#enable-terminal-formatting"><code class="docutils literal notranslate"><span class="pre">enable_terminal_formatting</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/graphics.html#render2d-options"><code class="docutils literal notranslate"><span class="pre">render2D_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/graphics.html#render3d-options"><code class="docutils literal notranslate"><span class="pre">render3D_options</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parameters/system_of_units.html">System of units</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parameters/system_of_units.html#unit-length"><code class="docutils literal notranslate"><span class="pre">unit_length</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters/units.html">Units</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parameters/units.html#unit-length"><code class="docutils literal notranslate"><span class="pre">unit_length</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/units.html#unit-time"><code class="docutils literal notranslate"><span class="pre">unit_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/units.html#unit-mass"><code class="docutils literal notranslate"><span class="pre">unit_mass</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parameters/debugging_options.html">Debugging options</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parameters/debugging_options.html#print-load-imbalance"><code class="docutils literal notranslate"><span class="pre">print_load_imbalance</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters/debugging.html">Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parameters/debugging.html#print-load-imbalance"><code class="docutils literal notranslate"><span class="pre">print_load_imbalance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/debugging.html#particle-reordering"><code class="docutils literal notranslate"><span class="pre">particle_reordering</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/debugging.html#enable-hubble"><code class="docutils literal notranslate"><span class="pre">enable_Hubble</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parameters/debugging.html#enable-class-background"><code class="docutils literal notranslate"><span class="pre">enable_class_background</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utilities/utilities.html">Utilities</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="utilities/class.html">The CLASS utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/convert.html">The convert utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/gadget.html">The gadget utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/info.html">The info utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/play.html">The play utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/powerspec.html">The powerspec utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/render2D.html">The render2D utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/render3D.html">The render3D utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/update.html">The update utility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utilities/watch.html">The watch utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/class.html">class utility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#basic-usage">Basic usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#command-line-options">Command-line options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#help-h-help">Help: <code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#minimum-fourier-mode-kmin">Minimum Fourier mode: <code class="docutils literal notranslate"><span class="pre">--kmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#maximum-fourier-mode-kmax">Maximum Fourier mode: <code class="docutils literal notranslate"><span class="pre">--kmax</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#fourier-modes-modes">Fourier modes: <code class="docutils literal notranslate"><span class="pre">--modes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#times-times">Times: <code class="docutils literal notranslate"><span class="pre">--times</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#gauge-gauge">Gauge: <code class="docutils literal notranslate"><span class="pre">--gauge</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="under_the_hood.html">Looking under the hood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#file-contents">File contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#data-layout">Data layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#extra-output">Extra output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="utilities/class.html#units">Units</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#complete-example-massive-neutrinos">Complete example (massive neutrinos)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#running-through-docker">Running through Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/class.html#tips-and-tricks">Tips and tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/convert.html">convert utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/gadget.html">gadget utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/info.html">info utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/play.html">play utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/powerspec.html">powerspec utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/bispec.html">bispec utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/render3D.html">render3D utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/update.html">update utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities/watch.html">watch utility</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#installation-failed">Installation failed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#compilation-failed">Compilation failed</a><ul>
@@ -257,11 +296,13 @@
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#dangerous-optimizations">Dangerous optimizations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#terminal-color-output-looks-weird">Terminal color output looks weird</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#terminal-colour-output-looks-weird">Terminal colour output looks weird</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#problems-related-to-python-libraries-and-packages">Problems related to Python libraries and packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#error-messages-containing-read-1">Error messages containing ‘Read -1’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#clock-skew-and-or-modification-times-in-the-future">Clock skew and/or modification times in the future</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#mixed-compiled-and-pure-python-mode">Mixed compiled and pure Python mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#the-simulation-hangs-when-calling-class">The simulation hangs when calling CLASS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#crashes-or-other-bad-behavior">Crashes or other bad behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#crashes-or-other-bad-behaviour">Crashes or other bad behaviour</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#problems-when-running-remotely">Problems when running remotely</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#choosing-an-mpi-executor">Choosing an MPI executor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="troubleshooting.html#different-hardware-architecture-on-front-end-and-remote-node">Different hardware architecture on front-end and remote node</a></li>
@@ -278,81 +319,35 @@
 </li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">CO<em>N</em>CEPT</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Command-line options</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command-line options</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
-            
               <a href="https://github.com/jmd-dk/concept/" class="fa fa-github"> Code Repository</a>
-            
-          
-        
       </li>
-    
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
 
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
 
-      
-      
-
-      
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="command-line-options">
-<h1>Command-line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="command-line-options">
+<h1>Command-line options<a class="headerlink" href="#command-line-options" title="Permalink to this heading"></a></h1>
 <p>This page elaborates on the many options to the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script, used to
 launch CO<em>N</em>CEPT.</p>
 <p>If you have yet to play around with the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script, you are advised to
@@ -365,74 +360,89 @@ may be used in place of <code class="docutils literal notranslate"><span class="
 <p>Many options require a value, e.g. <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">2</span></code> or equivalently
 <code class="docutils literal notranslate"><span class="pre">--nprocs</span> <span class="pre">2</span></code>. Instead of a space, the option name and value may be separated
 by an equal sign; <code class="docutils literal notranslate"><span class="pre">-n=2</span></code> or <code class="docutils literal notranslate"><span class="pre">--nprocs=2</span></code>.</p>
-<p>The command-line options are grouped into four categories as listed below.
-Underneath each category heading, a new facet of the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script is
-described, which might be of interest even if you do not want to study each
-option in detail.</p>
-<div class="contents local topic" id="contents">
+<p>Every command-line option has a corresponding <code class="docutils literal notranslate"><span class="pre">CONCEPT_*</span></code> environment
+variable, named according to the long format of the option (with dashes <code class="docutils literal notranslate"><span class="pre">-</span></code>
+replaced by underscores <code class="docutils literal notranslate"><span class="pre">_</span></code>). As an example, executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">CONCEPT_nprocs</span><span class="o">=</span><span class="m">4</span>
+</pre></div>
+</div>
+<p>will effectively supply <code class="docutils literal notranslate"><span class="pre">--nprocs</span> <span class="pre">4</span></code> to future invocations of <code class="docutils literal notranslate"><span class="pre">concept</span></code> in
+an implicit manner. Manually supplying <code class="docutils literal notranslate"><span class="pre">--nprocs</span></code>/<code class="docutils literal notranslate"><span class="pre">-n</span></code> will overrule the
+value set by <code class="docutils literal notranslate"><span class="pre">CONCEPT_nprocs</span></code>.</p>
+<p>The command-line options are grouped into four categories as listed below.</p>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#basics" id="id6">Basics</a></p>
 <ul>
 <li><p><a class="reference internal" href="#help-h-help" id="id7">Help: <code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></a></p></li>
-<li><p><a class="reference internal" href="#parameter-file-p-params" id="id8">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--params</span></code></a></p></li>
+<li><p><a class="reference internal" href="#parameter-file-p-param" id="id8">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--param</span></code></a></p></li>
 <li><p><a class="reference internal" href="#command-line-parameters-c-command-line-params" id="id9">Command-line parameters: <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--command-line-params</span></code></a></p></li>
 <li><p><a class="reference internal" href="#number-of-processes-n-nprocs" id="id10">Number of processes: <code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--nprocs</span></code></a></p></li>
 <li><p><a class="reference internal" href="#utility-u-utility" id="id11">Utility: <code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--utility</span></code></a></p></li>
-<li><p><a class="reference internal" href="#version-v-version" id="id12">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#remote-job-submission" id="id13">Remote job submission</a></p>
+<li><p><a class="reference internal" href="#remote-job-submission" id="id12">Remote job submission</a></p>
 <ul>
-<li><p><a class="reference internal" href="#queue-q-queue" id="id14">Queue: <code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--queue</span></code></a></p></li>
-<li><p><a class="reference internal" href="#wall-time-w-wall-time" id="id15">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--wall-time</span></code></a></p></li>
-<li><p><a class="reference internal" href="#memory-memory" id="id16">Memory: <code class="docutils literal notranslate"><span class="pre">--memory</span></code></a></p></li>
+<li><p><a class="reference internal" href="#queue-q-queue" id="id13">Queue: <code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--queue</span></code></a></p></li>
+<li><p><a class="reference internal" href="#wall-time-w-walltime" id="id14">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--walltime</span></code></a></p></li>
+<li><p><a class="reference internal" href="#memory-memory" id="id15">Memory: <code class="docutils literal notranslate"><span class="pre">--memory</span></code></a></p></li>
+<li><p><a class="reference internal" href="#job-name-job-name" id="id16">Job name: <code class="docutils literal notranslate"><span class="pre">--job-name</span></code></a></p></li>
 <li><p><a class="reference internal" href="#job-directive-j-job-directive" id="id17">Job directive: <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--job-directive</span></code></a></p></li>
-<li><p><a class="reference internal" href="#no-watching-no-watching" id="id18">No watching: <code class="docutils literal notranslate"><span class="pre">--no-watching</span></code></a></p></li>
+<li><p><a class="reference internal" href="#watch-watch" id="id18">Watch: <code class="docutils literal notranslate"><span class="pre">--watch</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#other-modes-of-building-running" id="id19">Other modes of building/running</a></p>
+<li><p><a class="reference internal" href="#building-and-running" id="id19">Building and running</a></p>
 <ul>
 <li><p><a class="reference internal" href="#local-local" id="id20">Local: <code class="docutils literal notranslate"><span class="pre">--local</span></code></a></p></li>
 <li><p><a class="reference internal" href="#pure-python-pure-python" id="id21">Pure Python: <code class="docutils literal notranslate"><span class="pre">--pure-python</span></code></a></p></li>
-<li><p><a class="reference internal" href="#no-optimizations-no-optimizations" id="id22">No optimizations: <code class="docutils literal notranslate"><span class="pre">--no-optimizations</span></code></a></p></li>
-<li><p><a class="reference internal" href="#native-optimizations-native-optimizations" id="id23">Native optimizations: <code class="docutils literal notranslate"><span class="pre">--native-optimizations</span></code></a></p></li>
-<li><p><a class="reference internal" href="#no-recompilation-no-recompilation" id="id24">No recompilation: <code class="docutils literal notranslate"><span class="pre">--no-recompilation</span></code></a></p></li>
-<li><p><a class="reference internal" href="#unsafe-building-unsafe-building" id="id25">Unsafe building: <code class="docutils literal notranslate"><span class="pre">--unsafe-building</span></code></a></p></li>
+<li><p><a class="reference internal" href="#build-b-build" id="id22">Build: <code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">--build</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rebuild-rebuild" id="id23">Rebuild: <code class="docutils literal notranslate"><span class="pre">--rebuild</span></code></a></p></li>
+<li><p><a class="reference internal" href="#optimizations-optimizations" id="id24">Optimizations: <code class="docutils literal notranslate"><span class="pre">--optimizations</span></code></a></p></li>
+<li><p><a class="reference internal" href="#link-time-optimizations-linktime-optimizations" id="id25">Link time optimizations: <code class="docutils literal notranslate"><span class="pre">--linktime-optimizations</span></code></a></p></li>
+<li><p><a class="reference internal" href="#native-optimizations-native-optimizations" id="id26">Native optimizations: <code class="docutils literal notranslate"><span class="pre">--native-optimizations</span></code></a></p></li>
+<li><p><a class="reference internal" href="#safe-build-safe-build" id="id27">Safe build: <code class="docutils literal notranslate"><span class="pre">--safe-build</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#specials" id="id26">Specials</a></p>
+<li><p><a class="reference internal" href="#specials" id="id28">Specials</a></p>
 <ul>
-<li><p><a class="reference internal" href="#test-t-test" id="id27">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--test</span></code></a></p></li>
-<li><p><a class="reference internal" href="#main-entry-point-m-main" id="id28">Main entry point: <code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--main</span></code></a></p></li>
-<li><p><a class="reference internal" href="#interactive-i-interactive" id="id29">Interactive: <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">--interactive</span></code></a></p></li>
+<li><p><a class="reference internal" href="#test-t-tests" id="id29">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tests</span></code></a></p></li>
+<li><p><a class="reference internal" href="#main-entry-point-m-main" id="id30">Main entry point: <code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--main</span></code></a></p></li>
+<li><p><a class="reference internal" href="#interactive-i-interactive" id="id31">Interactive: <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">--interactive</span></code></a></p></li>
+<li><p><a class="reference internal" href="#version-v-version" id="id32">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="basics">
-<span id="id1"></span><h2><a class="toc-backref" href="#id6">Basics</a><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+</nav>
+<section id="basics">
+<span id="id1"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Basics</a><a class="headerlink" href="#basics" title="Permalink to this heading"></a></h2>
 <p>The following basic command-line options are all you need to know in order to
 run CO<em>N</em>CEPT simulations locally.</p>
-<div class="section" id="help-h-help">
-<h3><a class="toc-backref" href="#id7">Help: <code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></a><a class="headerlink" href="#help-h-help" title="Permalink to this headline">¶</a></h3>
+<section id="help-h-help">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Help: <code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></a><a class="headerlink" href="#help-h-help" title="Permalink to this heading"></a></h3>
 <p>Displays a short description of each command-line option and exits:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">concept</span> <span class="o">-</span><span class="n">h</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-h
 </pre></div>
 </div>
 <p>This is helpful if you have forgotten the name of some particular option. For
 learning about the usage of a given option, this page is much preferable.</p>
-</div>
-<div class="section" id="parameter-file-p-params">
-<h3><a class="toc-backref" href="#id8">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--params</span></code></a><a class="headerlink" href="#parameter-file-p-params" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="parameter-file-p-param">
+<span id="parameter-file"></span><h3><a class="toc-backref" href="#id8" role="doc-backlink">Parameter file: <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--param</span></code></a><a class="headerlink" href="#parameter-file-p-param" title="Permalink to this heading"></a></h3>
 <p>Specifies the parameter file to use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -p &lt;/path/to/parameter-file&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-p<span class="w"> </span>&lt;/path/to/parameter-file&gt;
 </pre></div>
 </div>
-<p>The path may be specified relative to the <code class="docutils literal notranslate"><span class="pre">concept</span></code> directory. Typically,
-parameter files are kept in the <code class="docutils literal notranslate"><span class="pre">concept/params</span></code> directory. With the
-parameter file <code class="docutils literal notranslate"><span class="pre">my_params</span></code> located in this directory, specifying this
-parameter file then looks like</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -p params/my_params
+<p>The path may be specified in any of these formats:</p>
+<ul class="simple">
+<li><p>Absolutely.</p></li>
+<li><p>Relative to your current working directory.</p></li>
+<li><p>Relative to the CO<em>N</em>CEPT installation directory.</p></li>
+<li><p>Relative to the <code class="docutils literal notranslate"><span class="pre">param</span></code> directory.</p></li>
+</ul>
+<p>Typically, parameter files are kept in the <code class="docutils literal notranslate"><span class="pre">param</span></code> directory. With the
+parameter file <code class="docutils literal notranslate"><span class="pre">my_param</span></code> located in this directory, specifying the use
+of this parameter file may then look like e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-p<span class="w"> </span>param/my_param
 </pre></div>
 </div>
 <p>The many possible parameters to put inside parameter files are each described
@@ -441,19 +451,28 @@ absent from the supplied parameter file will take on default values. Leaving
 out the <code class="docutils literal notranslate"><span class="pre">-p</span></code> parameter file specification when invoking <code class="docutils literal notranslate"><span class="pre">concept</span></code>, <em>all</em>
 parameters take on their default values, which does not result in an actual
 simulation as no output is specified by default.</p>
-</div>
-<div class="section" id="command-line-parameters-c-command-line-params">
-<h3><a class="toc-backref" href="#id9">Command-line parameters: <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--command-line-params</span></code></a><a class="headerlink" href="#command-line-parameters-c-command-line-params" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="command-line-parameters-c-command-line-params">
+<span id="command-line-parameters"></span><h3><a class="toc-backref" href="#id9" role="doc-backlink">Command-line parameters: <code class="docutils literal notranslate"><span class="pre">-c</span></code>, <code class="docutils literal notranslate"><span class="pre">--command-line-params</span></code></a><a class="headerlink" href="#command-line-parameters-c-command-line-params" title="Permalink to this heading"></a></h3>
 <p>Directly specifies parameters to use, without referring to a parameter file.
 E.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -c <span class="s2">&quot;boxsize = 512*Mpc&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;boxsize = 512*Mpc&quot;</span>
 </pre></div>
 </div>
 <p>Often this is used in combination with a parameter file, e.g. if a suite of
 similar simulations is to be run where only a few parameter values change
 between the simulations. E.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -p params/my_params -c <span class="s2">&quot;Ωb = 0.049&quot;</span> -c <span class="s2">&quot;Ωcdm = 0.270&quot;</span>
-./concept -p params/my_params -c <span class="s2">&quot;Ωb = 0.048&quot;</span> -c <span class="s2">&quot;Ωcdm = 0.271&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># First simulation</span>
+./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>param/my_param<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;Ωb = 0.049&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;Ωcdm = 0.270&quot;</span>
+
+<span class="c1"># Second simulation</span>
+./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>param/my_param<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;Ωb = 0.048&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;Ωcdm = 0.271&quot;</span>
 </pre></div>
 </div>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">-c</span></code> option may be specified multiple times.</p>
@@ -474,51 +493,51 @@ for how this works). During the actual simulation, the value given by
 <code class="docutils literal notranslate"><span class="pre">-c</span></code> will be used.</p>
 <p>For a completely stand-alone parameter with no other parameters depending
 on its value, there is then no danger in overwriting its value using
-<code class="docutils literal notranslate"><span class="pre">-c</span></code>. It might not obvious whether a given parameter is stand-alone in or
-not, and so it is generally cleaner to just not have any parameters be
+<code class="docutils literal notranslate"><span class="pre">-c</span></code>. It might not be obvious whether a given parameter is stand-alone
+or not, and so it is generally cleaner to just not have any parameters be
 defined both in the parameter file and on the command-line.</p>
 </div>
-</div>
-<div class="section" id="number-of-processes-n-nprocs">
-<span id="number-of-processes"></span><h3><a class="toc-backref" href="#id10">Number of processes: <code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--nprocs</span></code></a><a class="headerlink" href="#number-of-processes-n-nprocs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="number-of-processes-n-nprocs">
+<span id="number-of-processes"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink">Number of processes: <code class="docutils literal notranslate"><span class="pre">-n</span></code>, <code class="docutils literal notranslate"><span class="pre">--nprocs</span></code></a><a class="headerlink" href="#number-of-processes-n-nprocs" title="Permalink to this heading"></a></h3>
 <p>Specifies the number of MPI processes to use, with each MPI process being
 mapped to its own CPU core (assuming enough of these are available). To run
 using e.g. 8 processes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -n <span class="m">8</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">8</span>
 </pre></div>
 </div>
 <p>If not specified, this defaults to 1.</p>
 <p>You may write the number of processes as a (Python 3) expression. All of these
 specifies that 8 processes should be used:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -n <span class="m">2</span>*4
-./concept -n <span class="m">2</span>**3
-./concept -n <span class="s2">&quot;3 + 5&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>*4
+./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>**3
+./concept<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;3 + 5&quot;</span>
 </pre></div>
 </div>
-<div class="section" id="specifying-multiple-nodes">
-<span id="id2"></span><h4>Specifying multiple nodes<a class="headerlink" href="#specifying-multiple-nodes" title="Permalink to this headline">¶</a></h4>
+<section id="specifying-multiple-nodes">
+<span id="id2"></span><h4>Specifying multiple nodes<a class="headerlink" href="#specifying-multiple-nodes" title="Permalink to this heading"></a></h4>
 <p>When running on a cluster with multiple compute nodes, you may also specify
 the number of nodes to be used. The following examples all specify 8 MPI
 processes distributed over 2 nodes each with 4 CPU cores:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -n <span class="m">2</span>:4
-./concept -n <span class="m">2</span>:2*2
-./concept -n <span class="s2">&quot;2 2*2&quot;</span>
-./concept -n <span class="s2">&quot;1 + 1 : 2**2&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>:4
+./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span>:2*2
+./concept<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;2 2*2&quot;</span>
+./concept<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;1 + 1 : 2**2&quot;</span>
 </pre></div>
 </div>
-<p>Note that imhomogeneous layouts are not describable. If you leave out the node
+<p>Note that inhomogeneous layouts are not describable. If you leave out the node
 specification (i.e. only supply a single number to <code class="docutils literal notranslate"><span class="pre">-n</span></code>) and the cluster is
 running Slurm, the specified total number of CPU cores may be distributed in
 any which way between the available nodes. If the cluster is running
 TORQUE/PBS, you must always explicitly specify the number of nodes as well as
 the number of CPU cores/node.</p>
-</div>
-</div>
-<div class="section" id="utility-u-utility">
-<h3><a class="toc-backref" href="#id11">Utility: <code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--utility</span></code></a><a class="headerlink" href="#utility-u-utility" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="utility-u-utility">
+<span id="utility"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink">Utility: <code class="docutils literal notranslate"><span class="pre">-u</span></code>, <code class="docutils literal notranslate"><span class="pre">--utility</span></code></a><a class="headerlink" href="#utility-u-utility" title="Permalink to this heading"></a></h3>
 <p>Signals that one of the CO<em>N</em>CEPT utilities is to be run instead of a
 simulation. To run e.g. the <code class="docutils literal notranslate"><span class="pre">powerspec</span></code> utility, do</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -u powerspec &lt;/path/to/snapshot&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-u<span class="w"> </span>powerspec<span class="w"> </span>&lt;/path/to/snapshot&gt;
 </pre></div>
 </div>
 <p>which will then produce a power spectrum of the snapshot file located at
@@ -526,329 +545,467 @@ simulation. To run e.g. the <code class="docutils literal notranslate"><span cla
 <p>Each utility comes with its own command-line options (for the <code class="docutils literal notranslate"><span class="pre">powerspec</span></code>
 utility, a required path to a snapshot), which you should specify together
 with the normal <code class="docutils literal notranslate"><span class="pre">concept</span></code> command-line options. In the case of the
-<code class="docutils literal notranslate"><span class="pre">powerspec</span></code> utility, this could look like one of</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -n <span class="m">4</span> -u powerspec &lt;/path/to/snapshot&gt;
-./concept -u powerspec &lt;/path/to/snapshot&gt; -n <span class="m">4</span>
+<code class="docutils literal notranslate"><span class="pre">powerspec</span></code> utility, this could look like</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>-u<span class="w"> </span>powerspec<span class="w"> </span>&lt;/path/to/snapshot&gt;
+<span class="c1"># or</span>
+./concept<span class="w"> </span>-u<span class="w"> </span>powerspec<span class="w"> </span>&lt;/path/to/snapshot&gt;<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span>
 </pre></div>
 </div>
 <p>both of which will produce a power spectrum of the snapshot using 4 processes.
-Though not encouraged, you may even detach the utility options
-(<code class="docutils literal notranslate"><span class="pre">&lt;/path/to/snapshot&gt;</span></code>) from the utility specification (<code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">powerspec</span></code>),
-as in</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -n <span class="m">4</span> &lt;/path/to/snapshot&gt; -u powerspec
-./concept &lt;/path/to/snapshot&gt; -n <span class="m">4</span> -u powerspec
-./concept &lt;/path/to/snapshot&gt; -u powerspec -n <span class="m">4</span>
-./concept -u powerspec -n <span class="m">4</span> &lt;/path/to/snapshot&gt;
+Some utilities have elaborate command-line interfaces of their own. Brief
+summaries gets printed if you do e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-u<span class="w"> </span>powerspec<span class="w"> </span>-h
 </pre></div>
 </div>
-<p>In short, do not worry about the order of <code class="docutils literal notranslate"><span class="pre">concept</span></code> and utility specific
-command-line options.</p>
-<p>You can read about the different utilities and their command-line interfaces
-under <a class="reference internal" href="utilities/utilities.html"><span class="doc">Utilities</span></a>.</p>
-<p>Note that while some utilies are always run locally, the ones that potentially
+<p>You can also read about the different utilities and their command-line
+interfaces under <a class="reference internal" href="utilities/utilities.html"><span class="doc">Utilities</span></a>.</p>
+<p>Many utilities further make use of the standard <code class="docutils literal notranslate"><span class="pre">concept</span></code> command-line
+options, like <code class="docutils literal notranslate"><span class="pre">-n</span></code> to set the number of processes as in the example above,
+or <code class="docutils literal notranslate"><span class="pre">-p</span></code> to specify a parameter file to use.</p>
+<p>While some utilities are always run locally, the ones that potentially
 involves large computational resources are subject to the same
-<a class="reference internal" href="#remote-job-submission"><span class="std std-ref">remote submission behavior</span></a> as standard
+<a class="reference internal" href="#remote-job-submission"><span class="std std-ref">remote submission behaviour</span></a> as standard
 simulations.</p>
-</div>
-<div class="section" id="version-v-version">
-<h3><a class="toc-backref" href="#id12">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a><a class="headerlink" href="#version-v-version" title="Permalink to this headline">¶</a></h3>
-<p>Prints out the version of CO<em>N</em>CEPT that is installed:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -v
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="remote-job-submission">
-<span id="id3"></span><h2><a class="toc-backref" href="#id13">Remote job submission</a><a class="headerlink" href="#remote-job-submission" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="remote-job-submission">
+<span id="id3"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink">Remote job submission</a><a class="headerlink" href="#remote-job-submission" title="Permalink to this heading"></a></h2>
 <p>When running CO<em>N</em>CEPT on a cluster with a job scheduler (Slurm and
 TORQUE/PBS supported), each invocation of <code class="docutils literal notranslate"><span class="pre">concept</span></code> submits the work to be
-done as a remote job (unless this behavior is <a class="reference internal" href="#local"><span class="std std-ref">overruled</span></a>). If
+done as a remote job (unless this behaviour is <a class="reference internal" href="#local"><span class="std std-ref">overruled</span></a>). If
 running locally, none of these options have any effect.</p>
 <p>On top of the <a class="reference internal" href="#basics"><span class="std std-ref">basic</span></a> options, the options below are used for
 additional resource specification when submitting remote jobs. Note that
 additional possibilities arise for the <code class="docutils literal notranslate"><span class="pre">-n</span></code> option when running on a cluster
-with multple compute nodes, as documented
+with multiple compute nodes, as documented
 <a class="reference internal" href="#specifying-multiple-nodes"><span class="std std-ref">above</span></a>.</p>
-<div class="section" id="queue-q-queue">
-<span id="queue"></span><h3><a class="toc-backref" href="#id14">Queue: <code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--queue</span></code></a><a class="headerlink" href="#queue-q-queue" title="Permalink to this headline">¶</a></h3>
-<p>Specifies the name of the queue (called “partition” in Slurm) to which the
+<section id="queue-q-queue">
+<span id="queue"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink">Queue: <code class="docutils literal notranslate"><span class="pre">-q</span></code>, <code class="docutils literal notranslate"><span class="pre">--queue</span></code></a><a class="headerlink" href="#queue-q-queue" title="Permalink to this heading"></a></h3>
+<p>Specifies the name of the queue (called ‘partition’ in Slurm) to which the
 remote job is to be submitted:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -q &lt;queue&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-q<span class="w"> </span>&lt;queue&gt;
 </pre></div>
 </div>
-<p>If using Slurm, you you can specify multiple queues:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -q &lt;queue1&gt;,&lt;queue2&gt;,&lt;queue3&gt;
+<p>If using Slurm, you can specify multiple queues:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-q<span class="w"> </span>&lt;queue1&gt;,&lt;queue2&gt;,&lt;queue3&gt;
 </pre></div>
 </div>
 <p>No remote job will be submitted if you do not supply this option. A job script
 will however be produced, which you may edit and submit manually.</p>
-</div>
-<div class="section" id="wall-time-w-wall-time">
-<span id="walltime"></span><h3><a class="toc-backref" href="#id15">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--wall-time</span></code></a><a class="headerlink" href="#wall-time-w-wall-time" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="wall-time-w-walltime">
+<span id="walltime"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink">Wall time: <code class="docutils literal notranslate"><span class="pre">-w</span></code>, <code class="docutils literal notranslate"><span class="pre">--walltime</span></code></a><a class="headerlink" href="#wall-time-w-walltime" title="Permalink to this heading"></a></h3>
 <p>Specifies the maximum wall time (total computation time) within which the
 remote job has to have completed. If the job runs for the entire specified
-maximum wall time, it will be killed.</p>
+maximum wall time, it will be killed by the job scheduler.</p>
 <p>You have a lot of freedom in how you want to express this time:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -w <span class="m">2</span>:30:00       <span class="c1">#  2 hours and 30 minutes</span>
-./concept -w 45min         <span class="c1">#              45 minutes</span>
-./concept -w 100m          <span class="c1">#  1 hour  and 40 minutes</span>
-./concept -w <span class="s2">&quot;3 days&quot;</span>      <span class="c1"># 72 hours</span>
-./concept -w <span class="m">3</span>:12:00:00    <span class="c1"># 84 hours</span>
-./concept -w <span class="s2">&quot;2d + 7.5hr&quot;</span>  <span class="c1"># 55 hours and 30 minutes</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-w<span class="w"> </span><span class="m">2</span>:30:00<span class="w">       </span><span class="c1">#  2 hours and 30 minutes</span>
+./concept<span class="w"> </span>-w<span class="w"> </span>45min<span class="w">         </span><span class="c1">#              45 minutes</span>
+./concept<span class="w"> </span>-w<span class="w"> </span>100m<span class="w">          </span><span class="c1">#  1 hour  and 40 minutes</span>
+./concept<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;3 days&quot;</span><span class="w">      </span><span class="c1"># 72 hours</span>
+./concept<span class="w"> </span>-w<span class="w"> </span><span class="m">3</span>:12:00:00<span class="w">    </span><span class="c1"># 84 hours</span>
+./concept<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;2d + 7.5hr&quot;</span><span class="w">  </span><span class="c1"># 55 hours and 30 minutes</span>
 </pre></div>
 </div>
-<p>If not set, the system/queue usually have some default wall time limit set.</p>
-</div>
-<div class="section" id="memory-memory">
-<span id="memory"></span><h3><a class="toc-backref" href="#id16">Memory: <code class="docutils literal notranslate"><span class="pre">--memory</span></code></a><a class="headerlink" href="#memory-memory" title="Permalink to this headline">¶</a></h3>
-<p>Specified the amount of memory allocated for the remote job. If you assign
+<p>If not specified, the system typically sets some default wall time.</p>
+</section>
+<section id="memory-memory">
+<span id="memory"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink">Memory: <code class="docutils literal notranslate"><span class="pre">--memory</span></code></a><a class="headerlink" href="#memory-memory" title="Permalink to this heading"></a></h3>
+<p>Specifies the amount of memory allocated for the remote job. If you assign
 insufficient memory to a job, it will be killed (usually with a somewhat
-cryptic error message) once its memory need exceeds the specified amount.</p>
+cryptic error message) by the system once its memory needs exceed the
+specified amount.</p>
 <p>Examples of memory specifications:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --memory 4GB     <span class="c1">#   4 gigabytes</span>
-./concept --memory 2048MB  <span class="c1">#   2 gigabytes</span>
-./concept --memory <span class="m">8</span>*2GB   <span class="c1">#  16 gigabytes</span>
-./concept --memory <span class="m">0</span>.5*TB  <span class="c1"># 512 gigabytes</span>
-./concept --mem 8G         <span class="c1">#   8 gigabytes</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--memory<span class="w"> </span>4GB<span class="w">     </span><span class="c1">#   4 gigabytes</span>
+./concept<span class="w"> </span>--memory<span class="w"> </span>2048MB<span class="w">  </span><span class="c1">#   2 gigabytes</span>
+./concept<span class="w"> </span>--memory<span class="w"> </span><span class="m">8</span>*2GB<span class="w">   </span><span class="c1">#  16 gigabytes</span>
+./concept<span class="w"> </span>--memory<span class="w"> </span><span class="m">0</span>.5*TB<span class="w">  </span><span class="c1"># 512 gigabytes</span>
+./concept<span class="w"> </span>--mem<span class="w"> </span>8G<span class="w">         </span><span class="c1">#   8 gigabytes</span>
 </pre></div>
 </div>
 <p>Note that the specified memory is the total memory available to the job, to be
 shared amongst all MPI processes / CPU cores, even when running on multiple
 compute nodes.</p>
-<p>If not set, the system usually have some default amount of memory to allocate
-to each job.</p>
+<p>If not specified, the system typically sets some default memory limit.</p>
+</section>
+<section id="job-name-job-name">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Job name: <code class="docutils literal notranslate"><span class="pre">--job-name</span></code></a><a class="headerlink" href="#job-name-job-name" title="Permalink to this heading"></a></h3>
+<p>Specify a name for the job, used by the job scheduler:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--job-name<span class="w"> </span><span class="s2">&quot;my job&quot;</span>
+</pre></div>
 </div>
-<div class="section" id="job-directive-j-job-directive">
-<h3><a class="toc-backref" href="#id17">Job directive: <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--job-directive</span></code></a><a class="headerlink" href="#job-directive-j-job-directive" title="Permalink to this headline">¶</a></h3>
+<p>This name then shows up when listing your current jobs (i.e. via <code class="docutils literal notranslate"><span class="pre">squeue</span></code> in
+Slurm and via <code class="docutils literal notranslate"><span class="pre">qstat</span></code> in TORQUE/PBS). If not specified, the default name
+‘<code class="docutils literal notranslate"><span class="pre">concept</span></code>’ will be used. Having several jobs with the same name is not a
+problem, as this name is not a replacement for the job ID.</p>
+</section>
+<section id="job-directive-j-job-directive">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Job directive: <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--job-directive</span></code></a><a class="headerlink" href="#job-directive-j-job-directive" title="Permalink to this heading"></a></h3>
 <p>The specifications of system resources — the designated
 <a class="reference internal" href="#queue"><span class="std std-ref">queue(s)</span></a>, the
 <a class="reference internal" href="#number-of-processes"><span class="std std-ref">number of nodes and processes</span></a>, the allowed
 <a class="reference internal" href="#walltime"><span class="std std-ref">wall time</span></a> and the allocated <a class="reference internal" href="#memory"><span class="std std-ref">memory</span></a> — gets
-saved as “job directives” within a job script, which is then submitted to the
+saved as ‘job directives’ within a job script, which is then submitted to the
 job scheduler. If you desire further fine tuning of system resources, you may
 supply further such directives using this command-line option.</p>
 <p>What job directives are available depend on the job scheduler, as well as the
-local configuration of the cluster and queue. As an example, imagine that the
-cluster/queue makes available both Intel and AMD nodes, and that it is set up
-so that we may request either type using Slurm’s <code class="docutils literal notranslate"><span class="pre">constraint</span></code> directive. To
-select AMD then;</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -j<span class="o">=</span><span class="s2">&quot;--constraint=AMD&quot;</span>
+local configuration of the cluster and queue. As an example, consider</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-j<span class="o">=</span><span class="s2">&quot;--exclusive&quot;</span>
 </pre></div>
 </div>
+<p>which tells Slurm to give the job exclusive access to the allocated nodes, so
+that the nodes will not be shared with other running jobs which could otherwise
+make use of still available resources.</p>
 <p>The effect of this is simply to place the line</p>
 <blockquote>
-<div><p>#SBATCH \-\-constraint=AMD</p>
+<div><p>#SBATCH --exclusive</p>
 </div></blockquote>
-<p>in the header of the job script, assuming Slurm, or</p>
+<p>in the header of the job script — assuming Slurm — or</p>
 <blockquote>
-<div><p>#PBS \-\-constraint=AMD</p>
+<div><p>#PBS --exclusive</p>
 </div></blockquote>
-<p>in the case of TORQUE/PBS (the specific example of <code class="docutils literal notranslate"><span class="pre">--constraint</span></code>
+<p>in the case of TORQUE/PBS (the specific example of <code class="docutils literal notranslate"><span class="pre">--exclusive</span></code>
 does not mean anything to TORQUE/PBS, though).</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Since the value <code class="docutils literal notranslate"><span class="pre">--constraint=AMD</span></code> starts with ‘<code class="docutils literal notranslate"><span class="pre">-</span></code>‘, using
-<code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">--constraint=AMD</span></code> or <code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">&quot;--constraint=AMD&quot;</span></code> is not legal as the
-parser registres <code class="docutils literal notranslate"><span class="pre">--constraint=AMD</span></code> as a whole new (and non-existent)
-option.</p>
+<p>Since the value <code class="docutils literal notranslate"><span class="pre">--exclusive</span></code> starts with ‘<code class="docutils literal notranslate"><span class="pre">-</span></code>’, using
+<code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">--exclusive</span></code> or <code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">&quot;--exclusive&quot;</span></code> is not legal as the
+parser registers <code class="docutils literal notranslate"><span class="pre">--exclusive</span></code> as a whole new (and non-existent)
+option to the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">-j</span></code> option may be specified multiple times.</p>
-</div>
-<div class="section" id="no-watching-no-watching">
-<h3><a class="toc-backref" href="#id18">No watching: <code class="docutils literal notranslate"><span class="pre">--no-watching</span></code></a><a class="headerlink" href="#no-watching-no-watching" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="watch-watch">
+<span id="watch-cmdoption"></span><h3><a class="toc-backref" href="#id18" role="doc-backlink">Watch: <code class="docutils literal notranslate"><span class="pre">--watch</span></code></a><a class="headerlink" href="#watch-watch" title="Permalink to this heading"></a></h3>
 <p>After submitting a remote job, rather than put you back at the system prompt,
 CO<em>N</em>CEPT will run the <a class="reference internal" href="utilities/watch.html"><span class="doc">watch utility</span></a> in order
 for you to follow the progression of the job. This have no effect on the job
 itself, and you may stop watching its printout using <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+<code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
 <p>If you have no desire to watch the job progression, you may specify this
-option:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --no-watching
+as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--watch<span class="w"> </span>False
 </pre></div>
 </div>
 <p>in which case the watch utility will not be run at all.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an example of a Boolean command-line option. As a value, you may
+use any of <code class="docutils literal notranslate"><span class="pre">False</span></code>/<code class="docutils literal notranslate"><span class="pre">f</span></code>/<code class="docutils literal notranslate"><span class="pre">no</span></code>/<code class="docutils literal notranslate"><span class="pre">n</span></code>/<code class="docutils literal notranslate"><span class="pre">0</span></code> for signifying <code class="docutils literal notranslate"><span class="pre">False</span></code> and
+any of <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">t</span></code>/<code class="docutils literal notranslate"><span class="pre">yes</span></code>/<code class="docutils literal notranslate"><span class="pre">y</span></code>/<code class="docutils literal notranslate"><span class="pre">1</span></code> for signifying <code class="docutils literal notranslate"><span class="pre">True</span></code> (all case
+insensitive). In addition, specifying the command-line option alone with no
+value is the same as setting it to <code class="docutils literal notranslate"><span class="pre">True</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">--watch</span></code> is equivalent
+to <code class="docutils literal notranslate"><span class="pre">--watch</span> <span class="pre">True</span></code>. As <code class="docutils literal notranslate"><span class="pre">True</span></code> also happens to be the default value,
+supplying <code class="docutils literal notranslate"><span class="pre">--watch</span></code> by itself then does nothing. This is not so for
+Boolean command-line options which default to <code class="docutils literal notranslate"><span class="pre">False</span></code>, e.g. the
+<code class="docutils literal notranslate"><span class="pre">--local</span></code> <a class="reference internal" href="#local"><span class="std std-ref">option</span></a>.</p>
 </div>
-</div>
-<div class="section" id="other-modes-of-building-running">
-<span id="id4"></span><h2><a class="toc-backref" href="#id19">Other modes of building/running</a><a class="headerlink" href="#other-modes-of-building-running" title="Permalink to this headline">¶</a></h2>
-<p>The following options change the mode in which CO<em>N</em>CEPT is built or run.
-With the exception of the <a class="reference internal" href="#local"><span class="std std-ref">--local</span></a> option, these are
-mostly useful for development.</p>
-<p>When invoking the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script, the default behavior is to check for
-changes in the source code since the last build, in which case the code is
-recompiled using the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. With the compiled code ready, the requested
-CO<em>N</em>CEPT run is performed. In addition, when working on a remote
-server/cluster (through SSH), rather than starting the run directly, it is
-submitted as a remote job.</p>
-<div class="section" id="local-local">
-<span id="local"></span><h3><a class="toc-backref" href="#id20">Local: <code class="docutils literal notranslate"><span class="pre">--local</span></code></a><a class="headerlink" href="#local-local" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="building-and-running">
+<span id="id4"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink">Building and running</a><a class="headerlink" href="#building-and-running" title="Permalink to this heading"></a></h2>
+<p>The following options change the way that CO<em>N</em>CEPT is built or run.</p>
+<p>While the Python source code for CO<em>N</em>CEPT lives in the <code class="docutils literal notranslate"><span class="pre">scr</span></code> directory,
+default invocation of the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script launches a job that runs off of
+a compiled build, placed in the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory. If changes to the source
+is detected, the code is recompiled, updating the contents of <code class="docutils literal notranslate"><span class="pre">build</span></code>. With
+the compiled code ready, the requested CO<em>N</em>CEPT run is performed.
+In addition, when working on a remote server/cluster (through SSH),
+rather than starting the run directly, it is submitted as a remote job.</p>
+<section id="local-local">
+<span id="local"></span><h3><a class="toc-backref" href="#id20" role="doc-backlink">Local: <code class="docutils literal notranslate"><span class="pre">--local</span></code></a><a class="headerlink" href="#local-local" title="Permalink to this heading"></a></h3>
 <p>Supply this option to disregard the fact that you are running on a remote
 server/cluster. That is, do not submit the CO<em>N</em>CEPT run as a remote job
 using the job scheduler, but run it directly as if you were running locally.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --local
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--local
+<span class="c1"># or</span>
+./conceot<span class="w"> </span>--local<span class="w"> </span>True
 </pre></div>
 </div>
-</div>
-<div class="section" id="pure-python-pure-python">
-<span id="pure-python"></span><h3><a class="toc-backref" href="#id21">Pure Python: <code class="docutils literal notranslate"><span class="pre">--pure-python</span></code></a><a class="headerlink" href="#pure-python-pure-python" title="Permalink to this headline">¶</a></h3>
-<p>When this option is supplied, CO<em>N</em>CEPT is run directly from the Python
-source files, disregarding the presence of any compiled modules:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --pure-python
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">False</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="pure-python-pure-python">
+<span id="pure-python"></span><h3><a class="toc-backref" href="#id21" role="doc-backlink">Pure Python: <code class="docutils literal notranslate"><span class="pre">--pure-python</span></code></a><a class="headerlink" href="#pure-python-pure-python" title="Permalink to this heading"></a></h3>
+<p>When this option is supplied, CO<em>N</em>CEPT is run directly off of the Python
+source files in <code class="docutils literal notranslate"><span class="pre">src</span></code>, disregarding the presence of
+any <a class="reference internal" href="#build"><span class="std std-ref">build</span></a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--pure-python
+<span class="c1"># or</span>
+./concept<span class="w"> </span>--pure-python<span class="w"> </span>True
 </pre></div>
 </div>
-<p>While handy during development, running actual simulations in pure Python mode
+<p>While handy for development, running actual simulations in pure Python mode
 is impractical due to an enormous performance hit.</p>
-<p>You can freely switch between running in compiled (the default) and pure
-Python mode, without needing to recompile in-between.</p>
-</div>
-<div class="section" id="no-optimizations-no-optimizations">
-<h3><a class="toc-backref" href="#id22">No optimizations: <code class="docutils literal notranslate"><span class="pre">--no-optimizations</span></code></a><a class="headerlink" href="#no-optimizations-no-optimizations" title="Permalink to this headline">¶</a></h3>
-<p>During compilation of CO<em>N</em>CEPT, a lot of optimizations are performed.
-These include source code transformations performed by <code class="docutils literal notranslate"><span class="pre">pyxpp.py</span></code> as well
-as standard C compiler optimizations, applied in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Though
-these optimizations should not be disabled under normal circumstances, you may
-do so by supplying this option:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --no-optimizations
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">False</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="build-b-build">
+<span id="build"></span><h3><a class="toc-backref" href="#id22" role="doc-backlink">Build: <code class="docutils literal notranslate"><span class="pre">-b</span></code>, <code class="docutils literal notranslate"><span class="pre">--build</span></code></a><a class="headerlink" href="#build-b-build" title="Permalink to this heading"></a></h3>
+<p>Specifies a build directory to use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-b<span class="w"> </span>my_build
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If CO<em>N</em>CEPT is already in a compiled state (built with or without
-optimizations), it will not be recompiled. To recompile without
-optimizations, you first have to remove the compiled files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span> concept <span class="o">&amp;&amp;</span> make clean<span class="o">)</span>
+<p>If a build already exists in this directory and is up-to-date with the source
+in <code class="docutils literal notranslate"><span class="pre">src</span></code>, it will be used. Otherwise, the code will be (re)build within this
+directory. If not specified, the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory will be used.</p>
+<p>This option is handy if you need to maintain several builds of the code, e.g.
+for different queues consisting of nodes with different
+hardware architectures.</p>
+<p>When working on a cluster, the building of the code will take place as part of
+the remote job, i.e. on the compute node and not the front-end. Using a
+designated build directory for a given queue / set of nodes, it is then safe
+to apply architecture-dependent,
+<a class="reference internal" href="#native-optimizations"><span class="std std-ref">native optimizations</span></a>.</p>
+<p>Moreover, Bash variable expansion <em>at runtime</em> is supported, making it
+possible to use a temporary scratch directory for the build. Say your cluster
+creates a designated <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;ID&gt;</span></code> for every job and it uses Slurm,
+you could then run CO<em>N</em>CEPT as</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;/scratch/$SLURM_JOB_ID&#39;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="native-optimizations-native-optimizations">
-<span id="native-optimizations"></span><h3><a class="toc-backref" href="#id23">Native optimizations: <code class="docutils literal notranslate"><span class="pre">--native-optimizations</span></code></a><a class="headerlink" href="#native-optimizations-native-optimizations" title="Permalink to this headline">¶</a></h3>
-<p>The default optimizations performed during compilation are all portable, so
-that the compiled code may be run on different (though not <em>too</em> different)
-hardware. This is particularly useful on a cluster of multiple nodes with
-different hardware, as CO<em>N</em>CEPT does not have to be recompiled when
-switching nodes.</p>
-<p>Supply this option if you are willing to use non-portable optimizations native
-to your particular system, by which it is possible to squeeze a further few
-percent performance increase out of the compilation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --native-optimizations
+<p>making use of the Slurm variable <code class="docutils literal notranslate"><span class="pre">SLURM_JOB_ID</span></code>, holding the job ID.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Note the use of single-quotes above. Were we to do</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;/scratch/</span><span class="nv">$SLURM_JOB_ID</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># wrong!</span>
 </pre></div>
 </div>
-<p>Specifically, this adds the <code class="docutils literal notranslate"><span class="pre">-march=native</span></code> compiler optimization.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If CO<em>N</em>CEPT is already in a compiled state (built with or without
-(native) optimizations), it will not be recompiled. To recompile with
-native optimizations, you first have to remove the compiled files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span> concept <span class="o">&amp;&amp;</span> make clean<span class="o">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="no-recompilation-no-recompilation">
-<h3><a class="toc-backref" href="#id24">No recompilation: <code class="docutils literal notranslate"><span class="pre">--no-recompilation</span></code></a><a class="headerlink" href="#no-recompilation-no-recompilation" title="Permalink to this headline">¶</a></h3>
-<p>Any change to one of the source files will trigger automatic recompilation
-upon the next invocation of <code class="docutils literal notranslate"><span class="pre">concept</span></code> (if not running in
-<a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a>). You may specify this option if you
-want to run using a current, out-of-date compiled state of the code:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --no-recompilation
-</pre></div>
-</div>
-</div>
-<div class="section" id="unsafe-building-unsafe-building">
-<h3><a class="toc-backref" href="#id25">Unsafe building: <code class="docutils literal notranslate"><span class="pre">--unsafe-building</span></code></a><a class="headerlink" href="#unsafe-building-unsafe-building" title="Permalink to this headline">¶</a></h3>
-<p>By default the compilation process is carried out in a safe manner, meaning
-that changes within a file triggers recompilation of all other files which
-rely on the specific file in question. If you know that the change is entirely
-internal to the given file, you may save yourself some compilation time by
-supplying this option, in which case all interdependencies between the files
-are ignored during compilation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept --unsafe-building
-</pre></div>
+<p>it would not work, as <code class="docutils literal notranslate"><span class="pre">$SLURM_JOB_ID</span></code> would be expanded right there on
+the command-line, where it does not hold a value.</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>This option really <em>is</em> unsafe and may very well lead to a buggy build. To
-clean up after an unsuccessful build, do</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span> concept <span class="o">&amp;&amp;</span> make clean<span class="o">)</span>
+<p>When the code is built as part of the job, the build process will be
+carried out on the ‘master node’ only. For multi-node jobs it is thus
+important to choose a build directory that can be accessed from all nodes.
+This may not be the case for the temporary scratch directory, as this may
+be local to each node, so that the same path <code class="docutils literal notranslate"><span class="pre">/scratch/$SLURM_JOB_ID</span></code>
+really corresponds to a separate directory on each node.</p>
+</div>
+</section>
+<section id="rebuild-rebuild">
+<span id="rebuild"></span><h3><a class="toc-backref" href="#id23" role="doc-backlink">Rebuild: <code class="docutils literal notranslate"><span class="pre">--rebuild</span></code></a><a class="headerlink" href="#rebuild-rebuild" title="Permalink to this heading"></a></h3>
+<p>Even if the compiled code in the <a class="reference internal" href="#build"><span class="std std-ref">build</span></a> directory is up-to-date
+with the source in <code class="docutils literal notranslate"><span class="pre">src</span></code>, a rebuild can be triggered by using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--rebuild
+<span class="c1"># or</span>
+./concept<span class="w"> </span>--rebuild<span class="w"> </span>True
+</pre></div>
+</div>
+<p>Conversely, an out-of-date build will be used as is, if you specify</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--rebuild<span class="w"> </span>False
+</pre></div>
+</div>
+<p>This is almost a Boolean command-line option, with the caveat that its
+default value (“unset”) is neither <code class="docutils literal notranslate"><span class="pre">True</span></code> nor <code class="docutils literal notranslate"><span class="pre">False</span></code>, as by default the
+code is rebuild conditionally, depending on whether the present build is
+up-to-date with the source. See the note in the description of the
+<code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a> for details on Boolean
+command-line options.</p>
+</section>
+<section id="optimizations-optimizations">
+<span id="optimizations"></span><h3><a class="toc-backref" href="#id24" role="doc-backlink">Optimizations: <code class="docutils literal notranslate"><span class="pre">--optimizations</span></code></a><a class="headerlink" href="#optimizations-optimizations" title="Permalink to this heading"></a></h3>
+<p>During compilation of CO<em>N</em>CEPT, a lot of optimizations are performed.
+These include source code transformations performed by <code class="docutils literal notranslate"><span class="pre">pyxpp.py</span></code> as well
+as standard C compiler optimizations (including
+<a class="reference internal" href="#link-time-optimizations"><span class="std std-ref">LTO</span></a>), applied in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>. Though
+these optimizations should not be disabled under normal circumstances, you may
+do so by supplying</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--optimizations<span class="w"> </span>False
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the <a class="reference internal" href="#build"><span class="std std-ref">build</span></a> directory already contains compiled code that
+is up-to-date with the source at <code class="docutils literal notranslate"><span class="pre">src</span></code> (built with or without
+optimizations), the code will not be rebuild. To rebuild without
+optimizations, you can make use of the <a class="reference internal" href="#rebuild"><span class="std std-ref">rebuild</span></a> option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--optimizations<span class="w"> </span>False<span class="w"> </span>--rebuild
 </pre></div>
 </div>
 </div>
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">True</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="link-time-optimizations-linktime-optimizations">
+<span id="link-time-optimizations"></span><h3><a class="toc-backref" href="#id25" role="doc-backlink">Link time optimizations: <code class="docutils literal notranslate"><span class="pre">--linktime-optimizations</span></code></a><a class="headerlink" href="#link-time-optimizations-linktime-optimizations" title="Permalink to this heading"></a></h3>
+<p>Link time optimizations (LTO) are on by default when compiling CO<em>N</em>CEPT,
+if supported by the compiler. Though usually preferable, the associated
+increase in build time and especially memory may be undesirable. To build
+CO<em>N</em>CEPT without link time optimizations, supply</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--linktime-optimizations<span class="w"> </span>False
+</pre></div>
+</div>
+<p>If optimizations are <a class="reference internal" href="#optimizations"><span class="std std-ref">disabled generally</span></a>
+(<code class="docutils literal notranslate"><span class="pre">--optimizations</span> <span class="pre">False</span></code>), LTO are disabled as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the <a class="reference internal" href="#build"><span class="std std-ref">build</span></a> directory already contains compiled code that
+is up-to-date with the source at <code class="docutils literal notranslate"><span class="pre">src</span></code> (built with or without LTO),
+the code will not be rebuild. To rebuild without LTO, you can make use of
+the <a class="reference internal" href="#rebuild"><span class="std std-ref">rebuild</span></a> option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--linktime-optimizations<span class="w"> </span>False<span class="w"> </span>--rebuild
+</pre></div>
 </div>
 </div>
-<div class="section" id="specials">
-<span id="id5"></span><h2><a class="toc-backref" href="#id26">Specials</a><a class="headerlink" href="#specials" title="Permalink to this headline">¶</a></h2>
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">True</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="native-optimizations-native-optimizations">
+<span id="native-optimizations"></span><h3><a class="toc-backref" href="#id26" role="doc-backlink">Native optimizations: <code class="docutils literal notranslate"><span class="pre">--native-optimizations</span></code></a><a class="headerlink" href="#native-optimizations-native-optimizations" title="Permalink to this heading"></a></h3>
+<p>The default optimizations performed during compilation are all portable, so
+that the compiled code may be run on different hardware (within reason).</p>
+<p>Supply this option if you are willing to use non-portable optimizations native
+to your particular system, by which it is possible to squeeze a further few
+percent performance increase out of the compilation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--native-optimizations
+<span class="c1"># or</span>
+./concept<span class="w"> </span>--native-optimizations<span class="w"> </span>True
+</pre></div>
+</div>
+<p>Specifically, this adds the <code class="docutils literal notranslate"><span class="pre">-march=native</span></code> compiler optimization.</p>
+<p>Enabling native optimizations is not possible if optimizations are
+<a class="reference internal" href="#optimizations"><span class="std std-ref">disabled generally</span></a> (<code class="docutils literal notranslate"><span class="pre">--optimizations</span> <span class="pre">False</span></code>).</p>
+<p>If working on a cluster with nodes of different architectures, having separate
+build directories for these is recommended if building with native
+optimizations. See the <a class="reference internal" href="#build"><span class="std std-ref">build</span></a> option for details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the <a class="reference internal" href="#build"><span class="std std-ref">build</span></a> directory already contains compiled code that
+is up-to-date with the source at <code class="docutils literal notranslate"><span class="pre">src</span></code> (built with or without
+native optimizations), the code will not be rebuild. To rebuild with native
+optimizations, you can make use of the <a class="reference internal" href="#rebuild"><span class="std std-ref">rebuild</span></a> option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--native-optimizations<span class="w"> </span>--rebuild
+</pre></div>
+</div>
+</div>
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">False</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="safe-build-safe-build">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Safe build: <code class="docutils literal notranslate"><span class="pre">--safe-build</span></code></a><a class="headerlink" href="#safe-build-safe-build" title="Permalink to this heading"></a></h3>
+<p>By default the compilation process is carried out in a safe manner, meaning
+that changes within a file triggers recompilation of all other files which
+rely on the specific file in question. If you know that a change is entirely
+internal to the given file, you may save yourself some compilation time by
+supplying</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>--safe-build<span class="w"> </span>False
+</pre></div>
+</div>
+<p>in which case all interdependencies between the files will be ignored
+during compilation.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">--safe-build</span> <span class="pre">False</span></code> really <em>is</em> unsafe and may very well lead to a
+buggy build. To clean up after an unsuccessful build, use the
+<a class="reference internal" href="#rebuild"><span class="std std-ref">rebuild</span></a> option or remove the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory
+entirely using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span><span class="w"> </span>concept<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>clean<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">True</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+</section>
+<section id="specials">
+<span id="id5"></span><h2><a class="toc-backref" href="#id28" role="doc-backlink">Specials</a><a class="headerlink" href="#specials" title="Permalink to this heading"></a></h2>
 <p>The following options are mostly useful for development. As demonstrated by
 the below examples though, “development” does not have to be restricted to the
 CO<em>N</em>CEPT code itself. That is, these special options come in handy should
 you wish to hook into the code, or simply check that the code is in a working
 state.</p>
-<div class="section" id="test-t-test">
-<span id="test"></span><h3><a class="toc-backref" href="#id27">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--test</span></code></a><a class="headerlink" href="#test-t-test" title="Permalink to this headline">¶</a></h3>
+<section id="test-t-tests">
+<span id="test"></span><h3><a class="toc-backref" href="#id29" role="doc-backlink">Test: <code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--tests</span></code></a><a class="headerlink" href="#test-t-tests" title="Permalink to this heading"></a></h3>
 <p>CO<em>N</em>CEPT comes with an integration test suite, located in the
-<code class="docutils literal notranslate"><span class="pre">concept/tests</span></code> directory. Each subdirectory within this directory
-implements a given test, the name of which equals the directory name. You may
-use this option to run these tests, checking that the code works correctly.</p>
+<code class="docutils literal notranslate"><span class="pre">test</span></code> directory. Each subdirectory within this directory implements a given
+test, with the test name given by the name of the subdirectory. You may use
+this option to run these tests, checking that the code works correctly.</p>
 <p>To run e.g. the <code class="docutils literal notranslate"><span class="pre">concept_vs_gadget_p3m</span></code> test — which runs a small
-CO<em>N</em>CEPT P³M simulation and a (supposedly) equivalent GADGET TreePM
-simulation, after which it compares the results — do one of</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -t concept_vs_gadget_p3m
-./concept -t tests/concept_vs_gadget_p3m
+CO<em>N</em>CEPT P³M simulation and a (supposedly) equivalent GADGET-2 TreePM
+simulation, after which it compares the results — do e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-t<span class="w"> </span>concept_vs_gadget_p3m
 </pre></div>
 </div>
-<p>where the first form reference the test by name while the second reference the
-test by its (relative) path. Note that tests are always performed locally,
-i.e. not submitted as remote jobs even when working on a remote
-cluster/server.</p>
+<p>The path to the test may be specified in any of these formats:</p>
+<ul class="simple">
+<li><p>Absolutely.</p></li>
+<li><p>Relative to your current working directory.</p></li>
+<li><p>Relative to the CO<em>N</em>CEPT installation directory.</p></li>
+<li><p>Relative to the <code class="docutils literal notranslate"><span class="pre">test</span></code> directory.</p></li>
+</ul>
+<p>Tests are always performed locally, i.e. not submitted as remote jobs even
+when working on a remote cluster/server.</p>
 <p>Once a test is complete, it will report either success or failure. Most
-simulations also produce some artifacts within their directory, most notably
-plots. You can clean up these artifacts by running the <code class="docutils literal notranslate"><span class="pre">clean</span></code> script within
-the corresponding test subdirectory, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tests/concept_vs_gadget_p3m/clean
+tests also produce some artefacts within their subdirectory, most notably
+plots.</p>
+<p>Multiple tests may be specified together:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-t<span class="w"> </span>concept_vs_gadget_p3m<span class="w"> </span>render
 </pre></div>
 </div>
-<p>The entire test suite may be run sing</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -t all
+<p>The entire test suite may be run using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-t<span class="w"> </span>all
 </pre></div>
 </div>
 <p>which runs each test sequentially. If one of the tests fails, the process
-terminates immediately. To clean up after all tests, i.e. run the <code class="docutils literal notranslate"><span class="pre">clean</span></code>
-script within each subdirectory of the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory, do</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span> concept <span class="o">&amp;&amp;</span> make clean_tests<span class="o">)</span>
+terminates immediately. To clean up after all tests, do</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="nb">source</span><span class="w"> </span>concept<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>clean-test<span class="o">)</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When testing with an initially clean <code class="docutils literal notranslate"><span class="pre">job</span></code> directory, any warnings
+produced by tests will count as errors, leading to test failure. This
+behaviour is not present if starting from a non-empty <code class="docutils literal notranslate"><span class="pre">job</span></code> directory.</p>
 </div>
-<div class="section" id="main-entry-point-m-main">
-<span id="main-entry-point"></span><h3><a class="toc-backref" href="#id28">Main entry point: <code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--main</span></code></a><a class="headerlink" href="#main-entry-point-m-main" title="Permalink to this headline">¶</a></h3>
-<p>The job of the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script is to set up the environment, build the
-actual CO<em>N</em>CEPT code (if not running in
-<a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a>) and then launch it (or submit this
-launch as a remote job). Skipping over many details, this final launch step
-looks something like</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m main.so  <span class="c1"># compiled mode</span>
-python main.py     <span class="c1"># pure Python mode</span>
+</section>
+<section id="main-entry-point-m-main">
+<span id="main-entry-point"></span><h3><a class="toc-backref" href="#id30" role="doc-backlink">Main entry point: <code class="docutils literal notranslate"><span class="pre">-m</span></code>, <code class="docutils literal notranslate"><span class="pre">--main</span></code></a><a class="headerlink" href="#main-entry-point-m-main" title="Permalink to this heading"></a></h3>
+<p>The responsibilities of the <code class="docutils literal notranslate"><span class="pre">concept</span></code> script are to set up the environment,
+build the actual CO<em>N</em>CEPT code (if not running in
+<a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a>) and then launch a job (or submit a
+remote job which then is launched from within a generated job script).
+Skipping over many details, this final launch step looks something like</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>build/main.so<span class="w">  </span><span class="c1"># compiled mode</span>
+python<span class="w"> </span>src/main.py<span class="w">       </span><span class="c1"># pure Python mode</span>
 </pre></div>
 </div>
-<p>which fires up the main module, which in turn initiates the simulation. We can
-use this option to switch out the default <code class="docutils literal notranslate"><span class="pre">main</span></code> module for some other main
-entry point.</p>
+<p>which fires up the <code class="docutils literal notranslate"><span class="pre">main</span></code> module, which in turn initiates the simulation.
+We can use this option to switch out the default <code class="docutils literal notranslate"><span class="pre">main</span></code> module for some
+other main entry point.</p>
 <p>As an example, consider the <code class="docutils literal notranslate"><span class="pre">hubble.py</span></code> script below:</p>
 <div class="literal-block-wrapper docutils container" id="hubble">
-<div class="code-block-caption"><span class="caption-text">hubble.py</span><a class="headerlink" href="#hubble" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">commons</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># import everyting from the CO𝘕CEPT commons module</span>
+<div class="code-block-caption"><span class="caption-text">hubble.py</span><a class="headerlink" href="#hubble" title="Permalink to this code"></a></div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">commons</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># import everything from the CO𝘕CEPT commons module</span>
 
 <span class="n">h</span> <span class="o">=</span> <span class="n">H0</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">km</span><span class="o">/</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">s</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">Mpc</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">h</span> <span class="si">= :</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">h</span><span class="w"> </span><span class="si">= :</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p>We can run this script using</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -m hubble.py --pure-python
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-m<span class="w"> </span>hubble.py<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--pure-python
 </pre></div>
 </div>
-<p>where <a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a> is needed as the script itself is
-not compiled. To see that this really does hook into the CO<em>N</em>CEPT
-machinery:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -m hubble.py -c <span class="s2">&quot;H0 = 72*km/(s*Mpc)&quot;</span> --pure-python
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we need <a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a> since the <code class="docutils literal notranslate"><span class="pre">hubble.py</span></code>
+script itself is not compiled, and the compiled <code class="docutils literal notranslate"><span class="pre">commons</span></code> module does
+not expose <code class="docutils literal notranslate"><span class="pre">H0</span></code> as a Python-level object.</p>
+</div>
+<p>To see that this really does hook into the CO<em>N</em>CEPT machinery:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-m<span class="w"> </span>hubble.py<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;H0 = 72*km/(s*Mpc)&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--pure-python
 </pre></div>
 </div>
 <p>Using <code class="docutils literal notranslate"><span class="pre">-m</span></code> with a script as above is convenient for e.g. making plotting
@@ -856,110 +1013,114 @@ scripts which need access to some CO<em>N</em>CEPT functionality. For small
 printouts, we can specify the Python code directly as the value to <code class="docutils literal notranslate"><span class="pre">-m</span></code>. To
 e.g. get the value of the gravitational constant implemented in CO<em>N</em>CEPT,
 we can do</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept <span class="se">\</span>
-    -m <span class="s2">&quot;from commons import *; \</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-m<span class="w"> </span><span class="s2">&quot;from commons import *; \</span>
 <span class="s2">        unit = units.m**3/(units.kg*units.s**2); \</span>
-<span class="s2">        print(G_Newton/unit); \</span>
-<span class="s2">    &quot;</span> <span class="se">\</span>
-    --pure-python <span class="se">\</span>
-<span class="p">|</span> tail -n <span class="m">1</span>
+<span class="s2">        print(f&#39;{G_Newton/unit:g}&#39;); \</span>
+<span class="s2">    &quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--pure-python<span class="w"> </span><span class="se">\</span>
+<span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="interactive-i-interactive">
-<h3><a class="toc-backref" href="#id29">Interactive: <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">--interactive</span></code></a><a class="headerlink" href="#interactive-i-interactive" title="Permalink to this headline">¶</a></h3>
-<p>Normally when running <code class="docutils literal notranslate"><span class="pre">concept</span></code>, you are send back to the system prompt once
+</section>
+<section id="interactive-i-interactive">
+<span id="interactive"></span><h3><a class="toc-backref" href="#id31" role="doc-backlink">Interactive: <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">--interactive</span></code></a><a class="headerlink" href="#interactive-i-interactive" title="Permalink to this heading"></a></h3>
+<p>Normally when running <code class="docutils literal notranslate"><span class="pre">concept</span></code>, you are sent back to the system prompt once
 the run has completed. You can use this option to instead end up in a live
 Python prompt, with the <a class="reference internal" href="#main-entry-point"><span class="std std-ref">main</span></a> scope available for
 exploration and further execution.</p>
 <p>You could run a simulation interactively if you wanted to:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept <span class="se">\</span>
-    -c <span class="s2">&quot;a_begin = 0.1&quot;</span> <span class="se">\</span>
-    -c <span class="s2">&quot;initial_conditions = {&#39;species&#39;: &#39;matter&#39;, &#39;N&#39;: 16**3}&quot;</span> <span class="se">\</span>
-    -i <span class="se">\</span>
-    --pure-python
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;a_begin = 0.1&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-c<span class="w"> </span><span class="s2">&quot;initial_conditions = {&#39;species&#39;: &#39;matter&#39;, &#39;N&#39;: 16**3}&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-i<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--pure-python
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">output_times</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="s1">&#39;render2D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">render2D_times</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">output_times</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="s1">&#39;render2D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">timeloop</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> indicates input which should be typed at the interactive Python
 prompt. We use <a class="reference internal" href="#pure-python"><span class="std std-ref">pure Python mode</span></a> as our interactive
 commands are interpreted directly by Python.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At least when using the standard
+<a class="reference internal" href="#main-entry-point"><span class="std std-ref">main entry point</span></a>, running in interactive mode
+using <a class="reference internal" href="#number-of-processes"><span class="std std-ref">more than one process</span></a> is not a good
+idea, as the interactive prompt is attached to the master process only.</p>
+</div>
 <p>While the above example requires knowledge of the internal code and serves no
 real use outside of development, a perhaps more useful usage of interactive
-mode is to combine it with <a class="reference internal" href="#main-entry-point"><span class="std std-ref">--main</span></a> when
-writing auxiliary scripts, or to use it purely exploratory. Say we did not
-know the variable name and value of the gravitational constant implemented in
-CO<em>N</em>CEPT, an we wanted to find out. We might go exploring, doing
-something like</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept -i --pure-python
+mode is to combine it with the <a class="reference internal" href="#main-entry-point"><span class="std std-ref">main entry point</span></a>
+option when writing auxiliary scripts, or to use it purely exploratory.</p>
+<p>Say we did not know the variable name and value of the gravitational constant
+implemented in CO<em>N</em>CEPT, an we wanted to find out. We might go exploring,
+doing something like</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-i<span class="w"> </span>--pure-python
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># What variables are available?</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 What variables are available?</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># I see one called &#39;G_Newton&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 I see one called &#39;G_Newton&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">G_Newton</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Its value looks unrecognizable! It must not be given in SI units.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># I see something called &#39;units&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 Its value looks unrecognisable! It must not be given in SI units.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 I see something called &#39;units&#39;.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">units</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">units</span><span class="o">.</span><span class="n">m</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">units</span><span class="o">.</span><span class="n">Mpc</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># What if I try ...</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 What if I try ...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">G_Newton</span><span class="o">/</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">kg</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Success!</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 💭 Success!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>This is a Boolean command-line option, defaulting to <code class="docutils literal notranslate"><span class="pre">False</span></code>. See the note
+in the description of the <code class="docutils literal notranslate"><span class="pre">--watch</span></code> <a class="reference internal" href="#watch-cmdoption"><span class="std std-ref">option</span></a>
+for details.</p>
+</section>
+<section id="version-v-version">
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">Version: <code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></a><a class="headerlink" href="#version-v-version" title="Permalink to this heading"></a></h3>
+<p>Prints out the version of CO<em>N</em>CEPT that is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./concept<span class="w"> </span>-v
+</pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
 
-      
-      
 
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
+    <p></p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -16,10 +16,19 @@ Many options require a value, e.g. ``-n 2`` or equivalently
 ``--nprocs 2``. Instead of a space, the option name and value may be separated
 by an equal sign; ``-n=2`` or ``--nprocs=2``.
 
+Every command-line option has a corresponding ``CONCEPT_*`` environment
+variable, named according to the long format of the option (with dashes ``-``
+replaced by underscores ``_``). As an example, executing
+
+.. code-block:: bash
+
+   export CONCEPT_nprocs=4
+
+will effectively supply ``--nprocs 4`` to future invocations of ``concept`` in
+an implicit manner. Manually supplying ``--nprocs``/``-n`` will overrule the
+value set by ``CONCEPT_nprocs``.
+
 The command-line options are grouped into four categories as listed below.
-Underneath each category heading, a new facet of the ``concept`` script is
-described, which might be of interest even if you do not want to study each
-option in detail.
 
 .. contents::
    :local:
@@ -40,7 +49,7 @@ Help: ``-h``, ``--help``
 ........................
 Displays a short description of each command-line option and exits:
 
-.. code-block::
+.. code-block:: bash
 
    ./concept -h
 
@@ -49,22 +58,30 @@ learning about the usage of a given option, this page is much preferable.
 
 
 
-Parameter file: ``-p``, ``--params``
-....................................
+.. _parameter_file:
+
+Parameter file: ``-p``, ``--param``
+...................................
 Specifies the parameter file to use:
 
 .. code-block:: bash
 
    ./concept -p </path/to/parameter-file>
 
-The path may be specified relative to the ``concept`` directory. Typically,
-parameter files are kept in the ``concept/params`` directory. With the
-parameter file ``my_params`` located in this directory, specifying this
-parameter file then looks like
+The path may be specified in any of these formats:
+
+* Absolutely.
+* Relative to your current working directory.
+* Relative to the CO\ *N*\ CEPT installation directory.
+* Relative to the ``param`` directory.
+
+Typically, parameter files are kept in the ``param`` directory. With the
+parameter file ``my_param`` located in this directory, specifying the use
+of this parameter file may then look like e.g.
 
 .. code-block:: bash
 
-   ./concept -p params/my_params
+   ./concept -p param/my_param
 
 The many possible parameters to put inside parameter files are each described
 in the sections under :doc:`Parameters </parameters/parameters>`. Parameters
@@ -74,6 +91,8 @@ parameters take on their default values, which does not result in an actual
 simulation as no output is specified by default.
 
 
+
+.. _command_line_parameters:
 
 Command-line parameters: ``-c``, ``--command-line-params``
 ..........................................................
@@ -90,8 +109,17 @@ between the simulations. E.g.
 
 .. code-block:: bash
 
-   ./concept -p params/my_params -c "Ωb = 0.049" -c "Ωcdm = 0.270"
-   ./concept -p params/my_params -c "Ωb = 0.048" -c "Ωcdm = 0.271"
+   # First simulation
+   ./concept \
+       -p param/my_param \
+       -c "Ωb = 0.049" \
+       -c "Ωcdm = 0.270"
+
+   # Second simulation
+   ./concept \
+       -p param/my_param \
+       -c "Ωb = 0.048" \
+       -c "Ωcdm = 0.271"
 
 Note that the ``-c`` option may be specified multiple times.
 
@@ -113,8 +141,8 @@ parameter file during read-in.
 
    For a completely stand-alone parameter with no other parameters depending
    on its value, there is then no danger in overwriting its value using
-   ``-c``. It might not obvious whether a given parameter is stand-alone in or
-   not, and so it is generally cleaner to just not have any parameters be
+   ``-c``. It might not be obvious whether a given parameter is stand-alone
+   or not, and so it is generally cleaner to just not have any parameters be
    defined both in the parameter file and on the command-line.
 
 
@@ -159,7 +187,7 @@ processes distributed over 2 nodes each with 4 CPU cores:
    ./concept -n "2 2*2"
    ./concept -n "1 + 1 : 2**2"
 
-Note that imhomogeneous layouts are not describable. If you leave out the node
+Note that inhomogeneous layouts are not describable. If you leave out the node
 specification (i.e. only supply a single number to ``-n``) and the cluster is
 running Slurm, the specified total number of CPU cores may be distributed in
 any which way between the available nodes. If the cluster is running
@@ -167,6 +195,8 @@ TORQUE/PBS, you must always explicitly specify the number of nodes as well as
 the number of CPU cores/node.
 
 
+
+.. _utility:
 
 Utility: ``-u``, ``--utility``
 ..............................
@@ -183,45 +213,33 @@ which will then produce a power spectrum of the snapshot file located at
 Each utility comes with its own command-line options (for the ``powerspec``
 utility, a required path to a snapshot), which you should specify together
 with the normal ``concept`` command-line options. In the case of the
-``powerspec`` utility, this could look like one of
+``powerspec`` utility, this could look like
 
 .. code-block:: bash
 
    ./concept -n 4 -u powerspec </path/to/snapshot>
+   # or
    ./concept -u powerspec </path/to/snapshot> -n 4
 
 both of which will produce a power spectrum of the snapshot using 4 processes.
-Though not encouraged, you may even detach the utility options
-(``</path/to/snapshot>``) from the utility specification (``-u powerspec``),
-as in
+Some utilities have elaborate command-line interfaces of their own. Brief
+summaries gets printed if you do e.g.
 
 .. code-block:: bash
 
-   ./concept -n 4 </path/to/snapshot> -u powerspec
-   ./concept </path/to/snapshot> -n 4 -u powerspec
-   ./concept </path/to/snapshot> -u powerspec -n 4
-   ./concept -u powerspec -n 4 </path/to/snapshot>
+   ./concept -u powerspec -h
 
-In short, do not worry about the order of ``concept`` and utility specific
-command-line options.
+You can also read about the different utilities and their command-line
+interfaces under :doc:`Utilities </utilities/utilities>`.
 
-You can read about the different utilities and their command-line interfaces
-under :doc:`Utilities </utilities/utilities>`.
+Many utilities further make use of the standard ``concept`` command-line
+options, like ``-n`` to set the number of processes as in the example above,
+or ``-p`` to specify a parameter file to use.
 
-Note that while some utilies are always run locally, the ones that potentially
+While some utilities are always run locally, the ones that potentially
 involves large computational resources are subject to the same
-:ref:`remote submission behavior <remote_job_submission>` as standard
+:ref:`remote submission behaviour <remote_job_submission>` as standard
 simulations.
-
-
-
-Version: ``-v``, ``--version``
-..............................
-Prints out the version of CO\ *N*\ CEPT that is installed:
-
-.. code-block:: bash
-
-   ./concept -v
 
 
 
@@ -231,13 +249,13 @@ Remote job submission
 ---------------------
 When running CO\ *N*\ CEPT on a cluster with a job scheduler (Slurm and
 TORQUE/PBS supported), each invocation of ``concept`` submits the work to be
-done as a remote job (unless this behavior is :ref:`overruled <local>`). If
+done as a remote job (unless this behaviour is :ref:`overruled <local>`). If
 running locally, none of these options have any effect.
 
 On top of the :ref:`basic <basics>` options, the options below are used for
 additional resource specification when submitting remote jobs. Note that
 additional possibilities arise for the ``-n`` option when running on a cluster
-with multple compute nodes, as documented
+with multiple compute nodes, as documented
 :ref:`above <specifying_multiple_nodes>`.
 
 
@@ -246,14 +264,14 @@ with multple compute nodes, as documented
 
 Queue: ``-q``, ``--queue``
 ..........................
-Specifies the name of the queue (called "partition" in Slurm) to which the
+Specifies the name of the queue (called 'partition' in Slurm) to which the
 remote job is to be submitted:
 
 .. code-block:: bash
 
    ./concept -q <queue>
 
-If using Slurm, you you can specify multiple queues:
+If using Slurm, you can specify multiple queues:
 
 .. code-block:: bash
 
@@ -266,11 +284,11 @@ will however be produced, which you may edit and submit manually.
 
 .. _walltime:
 
-Wall time: ``-w``, ``--wall-time``
-..................................
+Wall time: ``-w``, ``--walltime``
+.................................
 Specifies the maximum wall time (total computation time) within which the
 remote job has to have completed. If the job runs for the entire specified
-maximum wall time, it will be killed.
+maximum wall time, it will be killed by the job scheduler.
 
 You have a lot of freedom in how you want to express this time:
 
@@ -283,7 +301,7 @@ You have a lot of freedom in how you want to express this time:
    ./concept -w 3:12:00:00    # 84 hours
    ./concept -w "2d + 7.5hr"  # 55 hours and 30 minutes
 
-If not set, the system/queue usually have some default wall time limit set.
+If not specified, the system typically sets some default wall time.
 
 
 
@@ -291,9 +309,10 @@ If not set, the system/queue usually have some default wall time limit set.
 
 Memory: ``--memory``
 ....................
-Specified the amount of memory allocated for the remote job. If you assign
+Specifies the amount of memory allocated for the remote job. If you assign
 insufficient memory to a job, it will be killed (usually with a somewhat
-cryptic error message) once its memory need exceeds the specified amount.
+cryptic error message) by the system once its memory needs exceed the
+specified amount.
 
 Examples of memory specifications:
 
@@ -309,8 +328,22 @@ Note that the specified memory is the total memory available to the job, to be
 shared amongst all MPI processes / CPU cores, even when running on multiple
 compute nodes.
 
-If not set, the system usually have some default amount of memory to allocate
-to each job.
+If not specified, the system typically sets some default memory limit.
+
+
+
+Job name: ``--job-name``
+........................
+Specify a name for the job, used by the job scheduler:
+
+.. code-block:: bash
+
+   ./concept --job-name "my job"
+
+This name then shows up when listing your current jobs (i.e. via ``squeue`` in
+Slurm and via ``qstat`` in TORQUE/PBS). If not specified, the default name
+'``concept``' will be used. Having several jobs with the same name is not a
+problem, as this name is not a replacement for the job ID.
 
 
 
@@ -320,73 +353,86 @@ The specifications of system resources --- the designated
 :ref:`queue(s) <queue>`, the
 :ref:`number of nodes and processes <number_of_processes>`, the allowed
 :ref:`wall time <walltime>` and the allocated :ref:`memory <memory>` --- gets
-saved as "job directives" within a job script, which is then submitted to the
+saved as 'job directives' within a job script, which is then submitted to the
 job scheduler. If you desire further fine tuning of system resources, you may
 supply further such directives using this command-line option.
 
 What job directives are available depend on the job scheduler, as well as the
-local configuration of the cluster and queue. As an example, imagine that the
-cluster/queue makes available both Intel and AMD nodes, and that it is set up
-so that we may request either type using Slurm's ``constraint`` directive. To
-select AMD then;
+local configuration of the cluster and queue. As an example, consider
 
 .. code-block:: bash
 
-   ./concept -j="--constraint=AMD"
+   ./concept -j="--exclusive"
+
+which tells Slurm to give the job exclusive access to the allocated nodes, so
+that the nodes will not be shared with other running jobs which could otherwise
+make use of still available resources.
 
 The effect of this is simply to place the line
 
-   #SBATCH \\-\\-constraint=AMD
+   #SBATCH \-\-exclusive
 
-in the header of the job script, assuming Slurm, or
+in the header of the job script --- assuming Slurm --- or
 
-   #PBS \\-\\-constraint=AMD
+   #PBS \-\-exclusive
 
-in the case of TORQUE/PBS (the specific example of ``--constraint``
+in the case of TORQUE/PBS (the specific example of ``--exclusive``
 does not mean anything to TORQUE/PBS, though).
 
 .. caution::
-   Since the value ``--constraint=AMD`` starts with '``-``', using
-   ``-j --constraint=AMD`` or ``-j "--constraint=AMD"`` is not legal as the
-   parser registres ``--constraint=AMD`` as a whole new (and non-existent)
-   option.
+   Since the value ``--exclusive`` starts with '``-``', using
+   ``-j --exclusive`` or ``-j "--exclusive"`` is not legal as the
+   parser registers ``--exclusive`` as a whole new (and non-existent)
+   option to the ``concept`` script.
 
 The ``-j`` option may be specified multiple times.
 
 
 
-No watching: ``--no-watching``
-..............................
+.. _watch_cmdoption:
+
+Watch: ``--watch``
+..................
 After submitting a remote job, rather than put you back at the system prompt,
 CO\ *N*\ CEPT will run the :doc:`watch utility </utilities/watch>` in order
 for you to follow the progression of the job. This have no effect on the job
 itself, and you may stop watching its printout using ``Ctrl``\ +\ ``C``.
 
 If you have no desire to watch the job progression, you may specify this
-option:
+as follows:
 
 .. code-block:: bash
 
-   ./concept --no-watching
+   ./concept --watch False
 
 in which case the watch utility will not be run at all.
 
+.. note::
+   This is an example of a Boolean command-line option. As a value, you may
+   use any of ``False``/``f``/``no``/``n``/``0`` for signifying ``False`` and
+   any of ``True``/``t``/``yes``/``y``/``1`` for signifying ``True`` (all case
+   insensitive). In addition, specifying the command-line option alone with no
+   value is the same as setting it to ``True``, i.e. ``--watch`` is equivalent
+   to ``--watch True``. As ``True`` also happens to be the default value,
+   supplying ``--watch`` by itself then does nothing. This is not so for
+   Boolean command-line options which default to ``False``, e.g. the
+   ``--local`` :ref:`option <local>`.
 
 
-.. _other_modes_of_building_running:
 
-Other modes of building/running
--------------------------------
-The following options change the mode in which CO\ *N*\ CEPT is built or run.
-With the exception of the :ref:`\\\\-\\\\-local <local>` option, these are
-mostly useful for development.
+.. _building_and_running:
 
-When invoking the ``concept`` script, the default behavior is to check for
-changes in the source code since the last build, in which case the code is
-recompiled using the ``Makefile``. With the compiled code ready, the requested
-CO\ *N*\ CEPT run is performed. In addition, when working on a remote
-server/cluster (through SSH), rather than starting the run directly, it is
-submitted as a remote job.
+Building and running
+--------------------
+The following options change the way that CO\ *N*\ CEPT is built or run.
+
+While the Python source code for CO\ *N*\ CEPT lives in the ``scr`` directory,
+default invocation of the ``concept`` script launches a job that runs off of
+a compiled build, placed in the ``build`` directory. If changes to the source
+is detected, the code is recompiled, updating the contents of ``build``. With
+the compiled code ready, the requested CO\ *N*\ CEPT run is performed.
+In addition, when working on a remote server/cluster (through SSH),
+rather than starting the run directly, it is submitted as a remote job.
 
 
 
@@ -401,6 +447,12 @@ using the job scheduler, but run it directly as if you were running locally.
 .. code-block:: bash
 
    ./concept --local
+   # or
+   ./conceot --local True
+
+This is a Boolean command-line option, defaulting to ``False``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
 
 
 
@@ -408,41 +460,168 @@ using the job scheduler, but run it directly as if you were running locally.
 
 Pure Python: ``--pure-python``
 ..............................
-When this option is supplied, CO\ *N*\ CEPT is run directly from the Python
-source files, disregarding the presence of any compiled modules:
+When this option is supplied, CO\ *N*\ CEPT is run directly off of the Python
+source files in ``src``, disregarding the presence of
+any :ref:`build <build>`:
 
 .. code-block:: bash
 
    ./concept --pure-python
+   # or
+   ./concept --pure-python True
 
-While handy during development, running actual simulations in pure Python mode
+While handy for development, running actual simulations in pure Python mode
 is impractical due to an enormous performance hit.
 
-You can freely switch between running in compiled (the default) and pure
-Python mode, without needing to recompile in-between.
+This is a Boolean command-line option, defaulting to ``False``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
 
 
 
-No optimizations: ``--no-optimizations``
-........................................
-During compilation of CO\ *N*\ CEPT, a lot of optimizations are performed.
-These include source code transformations performed by ``pyxpp.py`` as well
-as standard C compiler optimizations, applied in the ``Makefile``. Though
-these optimizations should not be disabled under normal circumstances, you may
-do so by supplying this option:
+.. _build:
+
+Build: ``-b``, ``--build``
+..........................
+Specifies a build directory to use:
 
 .. code-block:: bash
 
-   ./concept --no-optimizations
+   ./concept -b my_build
 
-.. note::
-   If CO\ *N*\ CEPT is already in a compiled state (built with or without
-   optimizations), it will not be recompiled. To recompile without
-   optimizations, you first have to remove the compiled files:
+If a build already exists in this directory and is up-to-date with the source
+in ``src``, it will be used. Otherwise, the code will be (re)build within this
+directory. If not specified, the ``build`` directory will be used.
+
+This option is handy if you need to maintain several builds of the code, e.g.
+for different queues consisting of nodes with different
+hardware architectures.
+
+When working on a cluster, the building of the code will take place as part of
+the remote job, i.e. on the compute node and not the front-end. Using a
+designated build directory for a given queue / set of nodes, it is then safe
+to apply architecture-dependent,
+:ref:`native optimizations <native_optimizations>`.
+
+Moreover, Bash variable expansion *at runtime* is supported, making it
+possible to use a temporary scratch directory for the build. Say your cluster
+creates a designated ``/scratch/<ID>`` for every job and it uses Slurm,
+you could then run CO\ *N*\ CEPT as
+
+.. code-block:: bash
+
+   ./concept -b '/scratch/$SLURM_JOB_ID'
+
+making use of the Slurm variable ``SLURM_JOB_ID``, holding the job ID.
+
+.. caution::
+   Note the use of single-quotes above. Were we to do
 
    .. code-block:: bash
 
-      (source concept && make clean)
+      ./concept -b "/scratch/$SLURM_JOB_ID"  # wrong!
+
+   it would not work, as ``$SLURM_JOB_ID`` would be expanded right there on
+   the command-line, where it does not hold a value.
+
+.. caution::
+   When the code is built as part of the job, the build process will be
+   carried out on the 'master node' only. For multi-node jobs it is thus
+   important to choose a build directory that can be accessed from all nodes.
+   This may not be the case for the temporary scratch directory, as this may
+   be local to each node, so that the same path ``/scratch/$SLURM_JOB_ID``
+   really corresponds to a separate directory on each node.
+
+
+
+.. _rebuild:
+
+Rebuild: ``--rebuild``
+......................
+Even if the compiled code in the :ref:`build <build>` directory is up-to-date
+with the source in ``src``, a rebuild can be triggered by using
+
+.. code-block:: bash
+
+   ./concept --rebuild
+   # or
+   ./concept --rebuild True
+
+Conversely, an out-of-date build will be used as is, if you specify
+
+.. code-block:: bash
+
+   ./concept --rebuild False
+
+This is almost a Boolean command-line option, with the caveat that its
+default value ("unset") is neither ``True`` nor ``False``, as by default the
+code is rebuild conditionally, depending on whether the present build is
+up-to-date with the source. See the note in the description of the
+``--watch`` :ref:`option <watch_cmdoption>` for details on Boolean
+command-line options.
+
+
+
+.. _optimizations:
+
+Optimizations: ``--optimizations``
+..................................
+During compilation of CO\ *N*\ CEPT, a lot of optimizations are performed.
+These include source code transformations performed by ``pyxpp.py`` as well
+as standard C compiler optimizations (including
+:ref:`LTO <link_time_optimizations>`), applied in the ``Makefile``. Though
+these optimizations should not be disabled under normal circumstances, you may
+do so by supplying
+
+.. code-block:: bash
+
+   ./concept --optimizations False
+
+.. note::
+   If the :ref:`build <build>` directory already contains compiled code that
+   is up-to-date with the source at ``src`` (built with or without
+   optimizations), the code will not be rebuild. To rebuild without
+   optimizations, you can make use of the :ref:`rebuild <rebuild>` option:
+
+   .. code-block:: bash
+
+      ./concept --optimizations False --rebuild
+
+This is a Boolean command-line option, defaulting to ``True``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
+
+
+
+.. _link_time_optimizations:
+
+Link time optimizations: ``--linktime-optimizations``
+.....................................................
+Link time optimizations (LTO) are on by default when compiling CO\ *N*\ CEPT,
+if supported by the compiler. Though usually preferable, the associated
+increase in build time and especially memory may be undesirable. To build
+CO\ *N*\ CEPT without link time optimizations, supply
+
+.. code-block:: bash
+
+   ./concept --linktime-optimizations False
+
+If optimizations are :ref:`disabled generally <optimizations>`
+(``--optimizations False``), LTO are disabled as well.
+
+.. note::
+   If the :ref:`build <build>` directory already contains compiled code that
+   is up-to-date with the source at ``src`` (built with or without LTO),
+   the code will not be rebuild. To rebuild without LTO, you can make use of
+   the :ref:`rebuild <rebuild>` option:
+
+   .. code-block:: bash
+
+      ./concept --linktime-optimizations False --rebuild
+
+This is a Boolean command-line option, defaulting to ``True``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
 
 
 
@@ -451,10 +630,7 @@ do so by supplying this option:
 Native optimizations: ``--native-optimizations``
 ................................................
 The default optimizations performed during compilation are all portable, so
-that the compiled code may be run on different (though not *too* different)
-hardware. This is particularly useful on a cluster of multiple nodes with
-different hardware, as CO\ *N*\ CEPT does not have to be recompiled when
-switching nodes.
+that the compiled code may be run on different hardware (within reason).
 
 Supply this option if you are willing to use non-portable optimizations native
 to your particular system, by which it is possible to squeeze a further few
@@ -463,53 +639,62 @@ percent performance increase out of the compilation:
 .. code-block:: bash
 
    ./concept --native-optimizations
+   # or
+   ./concept --native-optimizations True
 
 Specifically, this adds the ``-march=native`` compiler optimization.
 
+Enabling native optimizations is not possible if optimizations are
+:ref:`disabled generally <optimizations>` (``--optimizations False``).
+
+If working on a cluster with nodes of different architectures, having separate
+build directories for these is recommended if building with native
+optimizations. See the :ref:`build <build>` option for details.
+
 .. note::
-   If CO\ *N*\ CEPT is already in a compiled state (built with or without
-   (native) optimizations), it will not be recompiled. To recompile with
-   native optimizations, you first have to remove the compiled files:
+   If the :ref:`build <build>` directory already contains compiled code that
+   is up-to-date with the source at ``src`` (built with or without
+   native optimizations), the code will not be rebuild. To rebuild with native
+   optimizations, you can make use of the :ref:`rebuild <rebuild>` option:
 
    .. code-block:: bash
 
-      (source concept && make clean)
+      ./concept --native-optimizations --rebuild
+
+This is a Boolean command-line option, defaulting to ``False``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
 
 
 
-No recompilation: ``--no-recompilation``
-........................................
-Any change to one of the source files will trigger automatic recompilation
-upon the next invocation of ``concept`` (if not running in
-:ref:`pure Python mode <pure_python>`). You may specify this option if you
-want to run using a current, out-of-date compiled state of the code:
-
-.. code-block:: bash
-
-   ./concept --no-recompilation
-
-
-
-Unsafe building: ``--unsafe-building``
-......................................
+Safe build: ``--safe-build``
+............................
 By default the compilation process is carried out in a safe manner, meaning
 that changes within a file triggers recompilation of all other files which
-rely on the specific file in question. If you know that the change is entirely
+rely on the specific file in question. If you know that a change is entirely
 internal to the given file, you may save yourself some compilation time by
-supplying this option, in which case all interdependencies between the files
-are ignored during compilation:
+supplying
 
 .. code-block:: bash
 
-   ./concept --unsafe-building
+   ./concept --safe-build False
+
+in which case all interdependencies between the files will be ignored
+during compilation.
 
 .. caution::
-   This option really *is* unsafe and may very well lead to a buggy build. To
-   clean up after an unsuccessful build, do
+   Using ``--safe-build False`` really *is* unsafe and may very well lead to a
+   buggy build. To clean up after an unsuccessful build, use the
+   :ref:`rebuild <rebuild>` option or remove the ``build`` directory
+   entirely using
 
    .. code-block:: bash
 
       (source concept && make clean)
+
+This is a Boolean command-line option, defaulting to ``True``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
 
 
 
@@ -527,49 +712,58 @@ state.
 
 .. _test:
 
-Test: ``-t``, ``--test``
-........................
+Test: ``-t``, ``--tests``
+.........................
 CO\ *N*\ CEPT comes with an integration test suite, located in the
-``concept/tests`` directory. Each subdirectory within this directory
-implements a given test, the name of which equals the directory name. You may
-use this option to run these tests, checking that the code works correctly.
+``test`` directory. Each subdirectory within this directory implements a given
+test, with the test name given by the name of the subdirectory. You may use
+this option to run these tests, checking that the code works correctly.
 
 To run e.g. the ``concept_vs_gadget_p3m`` test --- which runs a small
-CO\ *N*\ CEPT P³M simulation and a (supposedly) equivalent GADGET TreePM
-simulation, after which it compares the results --- do one of
+CO\ *N*\ CEPT P³M simulation and a (supposedly) equivalent GADGET-2 TreePM
+simulation, after which it compares the results --- do e.g.
 
 .. code-block:: bash
 
    ./concept -t concept_vs_gadget_p3m
-   ./concept -t tests/concept_vs_gadget_p3m
 
-where the first form reference the test by name while the second reference the
-test by its (relative) path. Note that tests are always performed locally,
-i.e. not submitted as remote jobs even when working on a remote
-cluster/server.
+The path to the test may be specified in any of these formats:
+
+* Absolutely.
+* Relative to your current working directory.
+* Relative to the CO\ *N*\ CEPT installation directory.
+* Relative to the ``test`` directory.
+
+Tests are always performed locally, i.e. not submitted as remote jobs even
+when working on a remote cluster/server.
 
 Once a test is complete, it will report either success or failure. Most
-simulations also produce some artifacts within their directory, most notably
-plots. You can clean up these artifacts by running the ``clean`` script within
-the corresponding test subdirectory, e.g.
+tests also produce some artefacts within their subdirectory, most notably
+plots.
+
+Multiple tests may be specified together:
 
 .. code-block:: bash
 
-   tests/concept_vs_gadget_p3m/clean
+   ./concept -t concept_vs_gadget_p3m render
 
-The entire test suite may be run sing
+The entire test suite may be run using
 
 .. code-block:: bash
 
    ./concept -t all
 
 which runs each test sequentially. If one of the tests fails, the process
-terminates immediately. To clean up after all tests, i.e. run the ``clean``
-script within each subdirectory of the ``tests`` directory, do
+terminates immediately. To clean up after all tests, do
 
 .. code-block:: bash
 
-   (source concept && make clean_tests)
+   (source concept && make clean-test)
+
+.. note::
+   When testing with an initially clean ``job`` directory, any warnings
+   produced by tests will count as errors, leading to test failure. This
+   behaviour is not present if starting from a non-empty ``job`` directory.
 
 
 
@@ -577,28 +771,28 @@ script within each subdirectory of the ``tests`` directory, do
 
 Main entry point: ``-m``, ``--main``
 ....................................
-The job of the ``concept`` script is to set up the environment, build the
-actual CO\ *N*\ CEPT code (if not running in
-:ref:`pure Python mode <pure_python>`) and then launch it (or submit this
-launch as a remote job). Skipping over many details, this final launch step
-looks something like
+The responsibilities of the ``concept`` script are to set up the environment,
+build the actual CO\ *N*\ CEPT code (if not running in
+:ref:`pure Python mode <pure_python>`) and then launch a job (or submit a
+remote job which then is launched from within a generated job script).
+Skipping over many details, this final launch step looks something like
 
 .. code-block:: bash
 
-   python -m main.so  # compiled mode
-   python main.py     # pure Python mode
+   python -m build/main.so  # compiled mode
+   python src/main.py       # pure Python mode
 
-which fires up the main module, which in turn initiates the simulation. We can
-use this option to switch out the default ``main`` module for some other main
-entry point.
+which fires up the ``main`` module, which in turn initiates the simulation.
+We can use this option to switch out the default ``main`` module for some
+other main entry point.
 
 As an example, consider the ``hubble.py`` script below:
 
-.. code-block:: python
+.. code-block:: python3
    :caption: hubble.py
    :name: hubble
 
-   from commons import *  # import everyting from the CO𝘕CEPT commons module
+   from commons import *  # import everything from the CO𝘕CEPT commons module
 
    h = H0/(100*units.km/(units.s*units.Mpc))
    print(f'{h = :g}')
@@ -607,15 +801,23 @@ We can run this script using
 
 .. code-block:: bash
 
-   ./concept -m hubble.py --pure-python
+   ./concept \
+       -m hubble.py \
+       --pure-python
 
-where :ref:`pure Python mode <pure_python>` is needed as the script itself is
-not compiled. To see that this really does hook into the CO\ *N*\ CEPT
-machinery:
+.. note::
+   Here we need :ref:`pure Python mode <pure_python>` since the ``hubble.py``
+   script itself is not compiled, and the compiled ``commons`` module does
+   not expose ``H0`` as a Python-level object.
+
+To see that this really does hook into the CO\ *N*\ CEPT machinery:
 
 .. code-block:: bash
 
-   ./concept -m hubble.py -c "H0 = 72*km/(s*Mpc)" --pure-python
+   ./concept \
+       -m hubble.py \
+       -c "H0 = 72*km/(s*Mpc)" \
+       --pure-python
 
 Using ``-m`` with a script as above is convenient for e.g. making plotting
 scripts which need access to some CO\ *N*\ CEPT functionality. For small
@@ -628,16 +830,18 @@ we can do
    ./concept \
        -m "from commons import *; \
            unit = units.m**3/(units.kg*units.s**2); \
-           print(G_Newton/unit); \
+           print(f'{G_Newton/unit:g}'); \
        " \
        --pure-python \
    | tail -n 1
 
 
 
+.. _interactive:
+
 Interactive: ``-i``, ``--interactive``
 ......................................
-Normally when running ``concept``, you are send back to the system prompt once
+Normally when running ``concept``, you are sent back to the system prompt once
 the run has completed. You can use this option to instead end up in a live
 Python prompt, with the :ref:`main <main_entry_point>` scope available for
 exploration and further execution.
@@ -652,38 +856,66 @@ You could run a simulation interactively if you wanted to:
        -i \
        --pure-python
 
-.. code-block:: python
+.. code-block:: python3
 
-   >>> output_times['a']['render2D'] = render2D_times['a'] = (1, )
+   >>> output_times['a']['render2D'] = (1, )
    >>> timeloop()
+   >>> exit()
 
 where ``>>>`` indicates input which should be typed at the interactive Python
 prompt. We use :ref:`pure Python mode <pure_python>` as our interactive
 commands are interpreted directly by Python.
 
+.. note::
+   At least when using the standard
+   :ref:`main entry point <main_entry_point>`, running in interactive mode
+   using :ref:`more than one process <number_of_processes>` is not a good
+   idea, as the interactive prompt is attached to the master process only.
+
 While the above example requires knowledge of the internal code and serves no
 real use outside of development, a perhaps more useful usage of interactive
-mode is to combine it with :ref:`\\\\-\\\\-main <main_entry_point>` when
-writing auxiliary scripts, or to use it purely exploratory. Say we did not
-know the variable name and value of the gravitational constant implemented in
-CO\ *N*\ CEPT, an we wanted to find out. We might go exploring, doing
-something like
+mode is to combine it with the :ref:`main entry point <main_entry_point>`
+option when writing auxiliary scripts, or to use it purely exploratory.
+
+Say we did not know the variable name and value of the gravitational constant
+implemented in CO\ *N*\ CEPT, an we wanted to find out. We might go exploring,
+doing something like
 
 .. code-block:: bash
 
    ./concept -i --pure-python
 
-.. code-block:: python
+.. code-block:: python3
 
-   >>> # What variables are available?
+   >>> # 💭 What variables are available?
    >>> dir()
-   >>> # I see one called 'G_Newton'
+
+   >>> # 💭 I see one called 'G_Newton'
    >>> G_Newton
-   >>> # Its value looks unrecognizable! It must not be given in SI units.
-   >>> # I see something called 'units'
+
+   >>> # 💭 Its value looks unrecognisable! It must not be given in SI units.
+   >>> # 💭 I see something called 'units'.
    >>> units
    >>> units.m
    >>> units.Mpc
-   >>> # What if I try ...
+
+   >>> # 💭 What if I try ...
    >>> G_Newton/(units.m**3/(units.kg*units.s**2))
-   >>> # Success!
+
+   >>> # 💭 Success!
+   >>> exit()
+
+This is a Boolean command-line option, defaulting to ``False``. See the note
+in the description of the ``--watch`` :ref:`option <watch_cmdoption>`
+for details.
+
+
+
+Version: ``-v``, ``--version``
+..............................
+Prints out the version of CO\ *N*\ CEPT that is installed:
+
+.. code-block:: bash
+
+   ./concept -v
+
